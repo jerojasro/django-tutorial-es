@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2012-03-21 13:09-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: orig/index.txt:2
+#, no-wrap
+msgid ""
+"Getting started\n"
+"===============\n"
+msgstr ""
+
+#. type: Plain text
+#: orig/index.txt:6
+msgid ""
+"New to Django? Or to Web development in general? Well, you came to the right "
+"place: read this material to quickly get up and running."
+msgstr ""
+
+#. type: Plain text
+#: orig/index.txt:9
+#, no-wrap
+msgid ""
+".. toctree::\n"
+"   :maxdepth: 1\n"
+msgstr ""
+
+#. type: Plain text
+#: orig/index.txt:17
+#, no-wrap
+msgid ""
+"   overview\n"
+"   install\n"
+"   tutorial01\n"
+"   tutorial02\n"
+"   tutorial03\n"
+"   tutorial04\n"
+"   whatsnext\n"
+msgstr ""
+
+#. type: Plain text
+#: orig/index.txt:19
+msgid ".. seealso::"
+msgstr ""
+
+#. type: Plain text
+#: orig/index.txt:23
+#, no-wrap
+msgid ""
+"    If you're new to Python_, you might want to start by getting an idea of "
+"what\n"
+"    the language is like. Django is 100% Python, so if you've got minimal\n"
+"    comfort with Python you'll probably get a lot more out of Django.\n"
+msgstr ""
+
+#. type: Plain text
+#: orig/index.txt:26
+#, no-wrap
+msgid ""
+"    If you're new to programming entirely, you might want to start with "
+"this\n"
+"    `list of Python resources for non-programmers`_\n"
+msgstr ""
+
+#. type: Plain text
+#: orig/index.txt:31
+#, no-wrap
+msgid ""
+"    If you already know a few other languages and want to get up to speed "
+"with\n"
+"    Python quickly, we recommend `Dive Into Python`_ (also available in a\n"
+"    `dead-tree version`_). If that's not quite your style, there are quite\n"
+"    a few other `books about Python`_.\n"
+msgstr ""
+
+#. type: Plain text
+#: orig/index.txt:36
+#, no-wrap
+msgid ""
+"    .. _python: http://python.org/\n"
+"    .. _list of Python resources for non-programmers: "
+"http://wiki.python.org/moin/BeginnersGuide/NonProgrammers\n"
+"    .. _dive into python: http://diveintopython.org/\n"
+"    .. _dead-tree version: "
+"http://www.amazon.com/exec/obidos/ASIN/1590593561/ref=nosim/jacobian20\n"
+"    .. _books about Python: http://wiki.python.org/moin/PythonBooks\n"
+msgstr ""
