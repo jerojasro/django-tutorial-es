@@ -35,7 +35,7 @@ msgstr ""
 #. type: Plain text
 #: orig/tutorial01.txt:6
 msgid "Let's learn by example."
-msgstr ""
+msgstr "Vamos a aprender con un ejemplo."
 
 #. type: Plain text
 #: orig/tutorial01.txt:9
@@ -43,21 +43,25 @@ msgid ""
 "Throughout this tutorial, we'll walk you through the creation of a basic "
 "poll application."
 msgstr ""
+"A lo largo de este tutorial, le guiaremos en la creación de una aplicación "
+"básica para encuestas (polls)."
 
 #. type: Plain text
 #: orig/tutorial01.txt:11
 msgid "It'll consist of two parts:"
-msgstr ""
+msgstr "Consistirá de dos partes:"
 
 #. type: Bullet: '    * '
 #: orig/tutorial01.txt:14
 msgid "A public site that lets people view polls and vote in them."
 msgstr ""
+"Un sitio público que permite a sus visitantes ver encuestas y votar en ellas."
 
 #. type: Bullet: '    * '
 #: orig/tutorial01.txt:14
 msgid "An admin site that lets you add, change and delete polls."
 msgstr ""
+"Y un sitio administrativo que le permite añadir, modificar y borrar encuestas."
 
 #. type: Plain text
 #: orig/tutorial01.txt:19
@@ -67,11 +71,15 @@ msgid ""
 "and typing ``import django``. If that command runs successfully, with no "
 "errors, Django is installed."
 msgstr ""
+"Asumiremos que ya ha :doc:`instalado Django</intro/install>`. Puede confirmar "
+"que Django está instalado ejecutando el intérprete interactivo de Python y "
+"ejecutando la orden ``import django``. Si dicha orden se ejecuta "
+"exitosamente, sin errores, Django está instalado."
 
 #. type: Plain text
 #: orig/tutorial01.txt:21
 msgid ".. admonition:: Where to get help:"
-msgstr ""
+msgstr ".. admonition:: Dónde conseguir ayuda:"
 
 #. type: Plain text
 #: orig/tutorial01.txt:25
