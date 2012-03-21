@@ -9,18 +9,18 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2012-03-21 13:08-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Javier Rojas <jerojasro@devnull.li>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:1
 #, no-wrap
 msgid "=====================================\n"
-msgstr ""
+msgstr "==============================================\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:3
@@ -29,6 +29,8 @@ msgid ""
 "Writing your first Django app, part 1\n"
 "=====================================\n"
 msgstr ""
+"Escribir su primera aplicación Django, parte 1\n"
+"==============================================\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:6
