@@ -1,1 +1,7 @@
 Translation of the Django tutorial to spanish
+
+# How to collaborate
+
+Choose one of the available .PO files in the es/ folder (see the PROGRESS
+file), mark yourself as translator, get going with it.
+

@@ -9,18 +9,18 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2012-03-21 13:08-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Javier Rojas <jerojasro@devnull.li>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:1
 #, no-wrap
 msgid "=====================================\n"
-msgstr ""
+msgstr "==============================================\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:3
@@ -29,11 +29,13 @@ msgid ""
 "Writing your first Django app, part 1\n"
 "=====================================\n"
 msgstr ""
+"Escribir su primera aplicación Django, parte 1\n"
+"==============================================\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:6
 msgid "Let's learn by example."
-msgstr ""
+msgstr "Vamos a aprender con un ejemplo."
 
 #. type: Plain text
 #: orig/tutorial01.txt:9
@@ -41,21 +43,25 @@ msgid ""
 "Throughout this tutorial, we'll walk you through the creation of a basic "
 "poll application."
 msgstr ""
+"A lo largo de este tutorial, le guiaremos en la creación de una aplicación "
+"básica para encuestas (polls)."
 
 #. type: Plain text
 #: orig/tutorial01.txt:11
 msgid "It'll consist of two parts:"
-msgstr ""
+msgstr "Consistirá de dos partes:"
 
 #. type: Bullet: '    * '
 #: orig/tutorial01.txt:14
 msgid "A public site that lets people view polls and vote in them."
 msgstr ""
+"Un sitio público que permite a sus visitantes ver encuestas y votar en ellas."
 
 #. type: Bullet: '    * '
 #: orig/tutorial01.txt:14
 msgid "An admin site that lets you add, change and delete polls."
 msgstr ""
+"Y un sitio administrativo que le permite añadir, modificar y borrar encuestas."
 
 #. type: Plain text
 #: orig/tutorial01.txt:19
@@ -65,11 +71,15 @@ msgid ""
 "and typing ``import django``. If that command runs successfully, with no "
 "errors, Django is installed."
 msgstr ""
+"Asumiremos que ya ha :doc:`instalado Django</intro/install>`. Puede confirmar "
+"que Django está instalado ejecutando el intérprete interactivo de Python y "
+"ejecutando la orden ``import django``. Si dicha orden se ejecuta "
+"exitosamente, sin errores, Django está instalado."
 
 #. type: Plain text
 #: orig/tutorial01.txt:21
 msgid ".. admonition:: Where to get help:"
-msgstr ""
+msgstr ".. admonition:: Dónde conseguir ayuda:"
 
 #. type: Plain text
 #: orig/tutorial01.txt:25
