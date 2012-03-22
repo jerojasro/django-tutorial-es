@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2012-03-21 13:09-0500\n"
-"PO-Revision-Date: 2012-03-21 15:35-0500\n"
+"PO-Revision-Date: 2012-03-21 21:43-0500\n"
 "Last-Translator: Igor Támara <igor@tamarapatino.org>\n"
 "Language-Team: slec's translation team\n"
 "Language: es\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: orig/overview.txt:1
 #, no-wrap
 msgid "==================\n"
-msgstr "=================="
+msgstr "==================="
 
 #. type: Plain text
 #: orig/overview.txt:3
@@ -53,6 +53,11 @@ msgid ""
 "can :doc:`start with the tutorial </intro/tutorial01>` or :doc:`dive right "
 "into more detailed documentation </topics/index>`."
 msgstr ""
+"El objetivo de este documento es ofrecerle las especificidades técnicas "
+"necesarias para entender cómo funciona Django, no es un tutorial o una "
+"referencia -- que de hecho tenemos ambas! Cuando esté listo para iniciar un "
+"proyecto puede :doc:`comenzar con el tutorial </intro/tutorial01>` o "
+":doc:`sumergirse en documentación más detallada </topics/index>`."
 
 #. type: Plain text
 #: orig/overview.txt:16
@@ -61,6 +66,8 @@ msgid ""
 "Design your model\n"
 "=================\n"
 msgstr ""
+"Diseñe su modelo\n"
+"================"
 
 #. type: Plain text
 #: orig/overview.txt:21
@@ -69,6 +76,9 @@ msgid ""
 "object-relational mapper in which you describe your database layout in "
 "Python code."
 msgstr ""
+"Aunque puede usar Django sin una base de datos, viene con un mapeo objeto-"
+"relacional en el cual puede describir la estructura de la base de datos en "
+"código Python."
 
 #. type: Plain text
 #: orig/overview.txt:26
@@ -78,6 +88,11 @@ msgid ""
 "database-schema problems. Here's a quick example, which might be saved in "
 "the file ``mysite/news/models.py``::"
 msgstr ""
+"La :doc:`sintaxis del modelo de datos </topics/db/models>` ofrece variadas "
+"formas enriquecidas para represenar sus modelos -- hasta ahora ha resuelto "
+"dos años de problemas relacionados con esquema de base de datos. A "
+"continuación un ejemplo rápido, que puede almacenarse en el fichero "
+"``mysite/news/models.py``::"
 
 #. type: Plain text
 #: orig/overview.txt:29
@@ -86,6 +101,8 @@ msgid ""
 "    class Reporter(models.Model):\n"
 "        full_name = models.CharField(max_length=70)\n"
 msgstr ""
+"    class Reporter(models.Model):\n"
+"        full_name = models.CharField(max_length=70)\n"
 
 #. type: Plain text
 #: orig/overview.txt:32
@@ -94,6 +111,8 @@ msgid ""
 "        def __unicode__(self):\n"
 "            return self.full_name\n"
 msgstr ""
+"        def __unicode__(self):\n"
+"            return self.full_name\n"
 
 #. type: Plain text
 #: orig/overview.txt:38 orig/overview.txt:147
@@ -105,6 +124,11 @@ msgid ""
 "        content = models.TextField()\n"
 "        reporter = models.ForeignKey(Reporter)\n"
 msgstr ""
+"    class Article(models.Model):\n"
+"        pub_date = models.DateTimeField()\n"
+"        headline = models.CharField(max_length=200)\n"
+"        content = models.TextField()\n"
+"        reporter = models.ForeignKey(Reporter)\n"
 
 #. type: Plain text
 #: orig/overview.txt:41
@@ -113,6 +137,8 @@ msgid ""
 "        def __unicode__(self):\n"
 "            return self.headline\n"
 msgstr ""
+"        def __unicode__(self):\n"
+"            return self.headline\n"
 
 #. type: Plain text
 #: orig/overview.txt:43
@@ -121,6 +147,8 @@ msgid ""
 "Install it\n"
 "==========\n"
 msgstr ""
+"Instálelo\n"
+"=========\n"
 
 #. type: Plain text
 #: orig/overview.txt:47
@@ -128,17 +156,19 @@ msgid ""
 "Next, run the Django command-line utility to create the database tables "
 "automatically:"
 msgstr ""
+"A continuación, ejecute la utilidad desde la línea de comandos de Django "
+"para crear las tablas en la base de datos de forma automática:"
 
 #. type: Plain text
 #: orig/overview.txt:49
 msgid ".. code-block:: bash"
-msgstr ""
+msgstr ".. code-block:: bash"
 
 #. type: Plain text
 #: orig/overview.txt:51
 #, no-wrap
 msgid "    manage.py syncdb\n"
-msgstr ""
+msgstr "    manage.py syncdb\n"
 
 #. type: Plain text
 #: orig/overview.txt:54
@@ -146,6 +176,8 @@ msgid ""
 "The :djadmin:`syncdb` command looks at all your available models and creates "
 "tables in your database for whichever tables don't already exist."
 msgstr ""
+"La orden :djadmin:`syncdb` revisa todos sus modelos disponibles y crea "
+"aquellas tablas en su base de datos que todavía no existen."
 
 #. type: Plain text
 #: orig/overview.txt:56
@@ -154,6 +186,8 @@ msgid ""
 "Enjoy the free API\n"
 "==================\n"
 msgstr ""
+"Disfrute el API gratuito\n"
+"========================\n"
 
 #. type: Plain text
 #: orig/overview.txt:60
@@ -162,6 +196,9 @@ msgid ""
 "</topics/db/queries>` to access your data. The API is created on the fly, no "
 "code generation necessary::"
 msgstr ""
+"Con esto tiene un :doc:`Python API </topics/db/queries>` rico y de forma "
+"gratuita para acceder a su información.  El API se crea instantáneamente, no "
+"se requiere la generación de código::"
 
 #. type: Plain text
 #: orig/overview.txt:63
@@ -170,6 +207,8 @@ msgid ""
 "    # Import the models we created from our \"news\" app\n"
 "    >>> from news.models import Reporter, Article\n"
 msgstr ""
+"    # Import the models we created from our \"news\" app\n"
+"    >>> from news.models import Reporter, Article\n"
 
 #. type: Plain text
 #: orig/overview.txt:67
@@ -179,6 +218,9 @@ msgid ""
 "    >>> Reporter.objects.all()\n"
 "    []\n"
 msgstr ""
+"    # Todavía no hay reporteros en el sistema.\n"
+"    >>> Reporter.objects.all()\n"
+"    []\n"
 
 #. type: Plain text
 #: orig/overview.txt:70
@@ -187,6 +229,8 @@ msgid ""
 "    # Create a new Reporter.\n"
 "    >>> r = Reporter(full_name='John Smith')\n"
 msgstr ""
+"    # Crear un nuevo Reportero.\n"
+"    >>> r = Reporter(full_name='John Smith')\n"
 
 #. type: Plain text
 #: orig/overview.txt:73
@@ -196,6 +240,9 @@ msgid ""
 "explicitly.\n"
 "    >>> r.save()\n"
 msgstr ""
+"    # Se almacena el objeto en la base de datos. Tiene que invocar save() "
+"explícitamente.\n"
+"    >>> r.save()\n"
 
 #. type: Plain text
 #: orig/overview.txt:77
@@ -205,6 +252,9 @@ msgid ""
 "    >>> r.id\n"
 "    1\n"
 msgstr ""
+"    # Ahora tiene un ID.\n"
+"    >>> r.id\n"
+"    1\n"
 
 #. type: Plain text
 #: orig/overview.txt:81
@@ -214,6 +264,9 @@ msgid ""
 "    >>> Reporter.objects.all()\n"
 "    [<Reporter: John Smith>]\n"
 msgstr ""
+"    # Ahora el reportero está en la base de datos.\n"
+"    >>> Reporter.objects.all()\n"
+"    [<Reporter: John Smith>]\n"
 
 #. type: Plain text
 #: orig/overview.txt:85
@@ -223,6 +276,9 @@ msgid ""
 "    >>> r.full_name\n"
 "    'John Smith'\n"
 msgstr ""
+"    # Los campos se representan como atributos del objeto Python.\n"
+"    >>> r.full_name\n"
+"    'John Smith'\n"
 
 #. type: Plain text
 #: orig/overview.txt:97
@@ -240,6 +296,17 @@ msgid ""
 "        ...\n"
 "    DoesNotExist: Reporter matching query does not exist.\n"
 msgstr ""
+"    # Django ofrece un API de búsqueda rico.\n"
+"    >>> Reporter.objects.get(id=1)\n"
+"    <Reporter: John Smith>\n"
+"    >>> Reporter.objects.get(full_name__startswith='John')\n"
+"    <Reporter: John Smith>\n"
+"    >>> Reporter.objects.get(full_name__contains='mith')\n"
+"    <Reporter: John Smith>\n"
+"    >>> Reporter.objects.get(id=2)\n"
+"    Traceback (most recent call last):\n"
+"        ...\n"
+"    DoesNotExist: Reporter matching query does not exist.\n"
 
 #. type: Plain text
 #: orig/overview.txt:103
@@ -251,6 +318,11 @@ msgid ""
 "    ...     content='Yeah.', reporter=r)\n"
 "    >>> a.save()\n"
 msgstr ""
+"    # Crear un artículo.\n"
+"    >>> from datetime import datetime\n"
+"    >>> a = Article(pub_date=datetime.now(), headline='Django is cool',\n"
+"    ...     content='Yeah.', reporter=r)\n"
+"    >>> a.save()\n"
 
 #. type: Plain text
 #: orig/overview.txt:107
@@ -260,6 +332,9 @@ msgid ""
 "    >>> Article.objects.all()\n"
 "    [<Article: Django is cool>]\n"
 msgstr ""
+"    # Ahora el artículo está en la base de datos.\n"
+"    >>> Article.objects.all()\n"
+"    [<Article: Django is cool>]\n"
 
 #. type: Plain text
 #: orig/overview.txt:112
@@ -270,6 +345,11 @@ msgid ""
 "    >>> r.full_name\n"
 "    'John Smith'\n"
 msgstr ""
+"    # Los objetos Article obtienen una API para acceder a los objetos "
+"Reporter relacionados.\n"
+"    >>> r = a.reporter\n"
+"    >>> r.full_name\n"
+"    'John Smith'\n"
 
 #. type: Plain text
 #: orig/overview.txt:116
@@ -279,6 +359,10 @@ msgid ""
 "    >>> r.article_set.all()\n"
 "    [<Article: Django is cool>]\n"
 msgstr ""
+"    # Y vice versa: los objetos Reporter obtienen una API para acceder a los "
+"objetos Article.\n"
+"    >>> r.article_set.all()\n"
+"    [<Article: Django is cool>]\n"
 
 #. type: Plain text
 #: orig/overview.txt:122
@@ -292,6 +376,12 @@ msgid ""
 "    >>> Article.objects.filter(reporter__full_name__startswith=\"John\")\n"
 "    [<Article: Django is cool>]\n"
 msgstr ""
+"    # La API sigue las relaciones tan profundo como lo requiera, ejecutando\n"
+"    # JOINs eficientes tras bambalinas.\n"
+"    # A continuación se encuentran todos los artículos de un reportero cuyo "
+"nombre comienza con \"John\".\n"
+"    >>> Article.objects.filter(reporter__full_name__startswith=\"John\")\n"
+"    [<Article: Django is cool>]\n"
 
 #. type: Plain text
 #: orig/overview.txt:126
@@ -301,6 +391,10 @@ msgid ""
 "    >>> r.full_name = 'Billy Goat'\n"
 "    >>> r.save()\n"
 msgstr ""
+"    # Se cambia un objeto modificando sus atributos e invocando el método "
+"save().\n"
+"    >>> r.full_name = 'Billy Goat'\n"
+"    >>> r.save()\n"
 
 #. type: Plain text
 #: orig/overview.txt:129
@@ -309,6 +403,8 @@ msgid ""
 "    # Delete an object with delete().\n"
 "    >>> r.delete()\n"
 msgstr ""
+"    # Se elimina un objecto con delete().\n"
+"    >>> r.delete()\n"
 
 #. type: Plain text
 #: orig/overview.txt:131
