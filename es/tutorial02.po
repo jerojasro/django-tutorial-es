@@ -1,26 +1,26 @@
 # SOME DESCRIPTIVE TITLE
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+# root <juanf.jaramillo@opdevel.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2012-03-21 13:09-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2012-03-21 21:38-0500\n"
+"Last-Translator: root <juanf.jaramillo@opdevel.com>\n"
+"Language-Team: slec's translation team\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
 
 #. type: Plain text
 #: orig/tutorial02.txt:1
 #, no-wrap
 msgid "=====================================\n"
-msgstr ""
+msgstr "=====================================\n"
 
 #. type: Plain text
 #: orig/tutorial02.txt:3
@@ -28,7 +28,7 @@ msgstr ""
 msgid ""
 "Writing your first Django app, part 2\n"
 "=====================================\n"
-msgstr ""
+msgstr "Escribir su primera aplicación de Django, parte 2"
 
 #. type: Plain text
 #: orig/tutorial02.txt:8
@@ -37,6 +37,9 @@ msgid ""
 "off. We're continuing the Web-poll application and will focus on Django's "
 "automatically-generated admin site."
 msgstr ""
+"Este tutorial comienza en donde :doc:`Tutorial 1 </intro/tutorial01>` "
+"terminó. Continuaremos con la aplicación Web-poll y nos enfocaremos en el "
+"sitio administrativo auto generado de Django."
 
 #. type: Plain text
 #: orig/tutorial02.txt:10
@@ -53,6 +56,10 @@ msgid ""
 "    reason, Django entirely automates creation of admin interfaces for "
 "models.\n"
 msgstr ""
+"    Generar sitios administrativos para su equipo o clientes para "
+"adicionar, cambiar y borrar contenido es un trabajo tedioso que no requiere "
+"creatividad. Por tal razón, Django automatiza totalmente la creación de "
+"interfaces de administración para los modelos."
 
 #. type: Plain text
 #: orig/tutorial02.txt:20
@@ -67,6 +74,12 @@ msgid ""
 "    displayed on the public site. Django solves the problem of creating a\n"
 "    unified interface for site administrators to edit content.\n"
 msgstr ""
+"    Django fue escrito en un ambiente de una sala de prensa, con una muy "
+"clara separación entre \"contenido editorial\" y el sitio \"publico\". Los "
+"administradores del sito usan el sistema para adicionar nuevos relatos, "
+"eventos, resultados deportivos, etc., y el contenido es mostrado en el sitio "
+"público. Django resuelve el problema de crear una interface unificada para "
+"que el administrador del sitio edite el contenido."
 
 #. type: Plain text
 #: orig/tutorial02.txt:23
@@ -76,6 +89,8 @@ msgid ""
 "for\n"
 "    site managers.\n"
 msgstr ""
+"    El administrador no es necesariamente utilizado por los que visitan el "
+"sitio; este es para el administrador del sitio."
 
 #. type: Plain text
 #: orig/tutorial02.txt:25
@@ -83,7 +98,7 @@ msgstr ""
 msgid ""
 "Activate the admin site\n"
 "=======================\n"
-msgstr ""
+msgstr "Activar el sitio administrativo"
 
 #. type: Plain text
 #: orig/tutorial02.txt:29
@@ -92,11 +107,16 @@ msgid ""
 "thing. To activate the admin site for your installation, do these three "
 "things:"
 msgstr ""
+"El sitio administrativo de Django no está activado por defecto -- esto es un opt-"
+"in. Para activar el sitio administrador en su instalación, haga estas tres "
+"cosas:"
 
 #. type: Bullet: '    * '
 #: orig/tutorial02.txt:31
 msgid "Add ``\"django.contrib.admin\"`` to your :setting:`INSTALLED_APPS` setting."
 msgstr ""
+"Adicione ``\"django.contrib.admin\"`` a su configuración "
+":setting:`INSTALLED_APPS`."
 
 #. type: Bullet: '    * '
 #: orig/tutorial02.txt:34
@@ -104,6 +124,9 @@ msgid ""
 "Run ``python manage.py syncdb``. Since you have added a new application to "
 ":setting:`INSTALLED_APPS`, the database tables need to be updated."
 msgstr ""
+"Ejecute ``python manage.py syncdb``. Ya que ha adicionado una nueva "
+"aplicación a :setting:`INSTALLED_APPS`, las tablas de al base de datos "
+"necesitan ser actualizadas."
 
 #. type: Bullet: '    * '
 #: orig/tutorial02.txt:40
@@ -114,6 +137,12 @@ msgid ""
 "to know is that it maps URL roots to applications. In the end, you should "
 "have a ``urls.py`` file that looks like this:"
 msgstr ""
+"Edite el archivo ``mysite/urls.py`` y remueva los comentarios de las líneas "
+"que se refieren al admin -- hay tres líneas en total. Este archivo es un "
+"URLconf; profundizaremos en URLconfs en el siguiente tutorial. Por ahora, "
+"todo lo que necesita saber es que hay mapas de raíces de URL para "
+"aplicaciones. Al final, deberá tener un archivo ``urls.py`` que luce como "
+"esto:"
 
 #. type: Plain text
 #: orig/tutorial02.txt:42
@@ -170,6 +199,8 @@ msgstr ""
 #, no-wrap
 msgid "      (The bold lines are the ones that needed to be uncommented.)\n"
 msgstr ""
+"      (Las líneas resaltadas son las que se necesita que no estén "
+"comentadas.)"
 
 #. type: Plain text
 #: orig/tutorial02.txt:64
