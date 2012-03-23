@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2012-03-21 13:09-0500\n"
-"PO-Revision-Date: 2012-03-22 20:00-0500\n"
+"PO-Revision-Date: 2012-03-22 20:10-0500\n"
 "Last-Translator: root <juanf.jaramillo@opdevel.com>\n"
 "Language-Team: slec's translation team\n"
 "Language: es\n"
@@ -296,12 +296,14 @@ msgstr ""
 msgid ""
 "Make the poll app modifiable in the admin\n"
 "=========================================\n"
-msgstr ""
+msgstr "Hacer la aplicación de sondeo modificable en el admi"
 
 #. type: Plain text
 #: orig/tutorial02.txt:98
 msgid "But where's our poll app? It's not displayed on the admin index page."
 msgstr ""
+"Pero ¿dónde está nuestra aplicación de sondeo? Esta no se despliega en el la "
+"página del índice del administrativo."
 
 #. type: Plain text
 #: orig/tutorial02.txt:102
@@ -310,6 +312,10 @@ msgid ""
 "an admin interface. To do this, create a file called ``admin.py`` in your "
 "``polls`` directory, and edit it to look like this::"
 msgstr ""
+"Solo hay que hacer una cosa: necesitamos decirle al administrativo que el "
+"objeto ``Poll`` tiene una interfase administrativa. Para hacer esto, cree un "
+"archivo llamado `admin.py` en su directorio ``polls``, y edítelo para que "
+"luzca como esto::"
 
 #. type: Plain text
 #: orig/tutorial02.txt:105
@@ -332,6 +338,10 @@ msgid ""
 "the server auto-reloads code every time you modify a file, but the action of "
 "creating a new file doesn't trigger the auto-reloading logic."
 msgstr ""
+"Necesitará reiniciar el servidor de desarrollo para ver los cambios. "
+"Normalmente, el servidor automáticamente recarga el código cada vez que "
+"modifica un archivo, pero la acción de crear un nuevo archivo no provoca la "
+"lógica de auto recarga."
 
 #. type: Plain text
 #: orig/tutorial02.txt:113
