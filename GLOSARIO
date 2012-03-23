@@ -2,3 +2,5 @@ file : fichero
 JOIN : JOIN
 command line: intérprete de órdenes
 command: orden
+script: script
+built-in: integrado

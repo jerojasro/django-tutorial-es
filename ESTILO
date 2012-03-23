@@ -5,3 +5,8 @@ El presente progresivo que está en inglés se traduce a infinitivo en español
 No se tutea al lector
 
 Las variables que están en inglés y los nombres de clases no se traducen
+
+Tampoco se traducen los nombres de carpetas, ficheros y demás.
+
+Las comillas dobles "" deben reemplazarse con comillas francesas «». En Linux,
+es posible escribir estas comillas con AltGr-z y AltGr-x.
