@@ -81,6 +81,7 @@ msgstr ""
 msgid ".. admonition:: Where to get help:"
 msgstr ".. admonition:: Dónde conseguir ayuda:"
 
+# TODO ver cómo mencionar #django-es
 #. type: Plain text
 #: orig/tutorial01.txt:25
 #, no-wrap
@@ -90,6 +91,9 @@ msgid ""
 "    to `django-users`__ or drop by `#django on irc.freenode.net`__ to chat\n"
 "    with other Django users who might be able to help.\n"
 msgstr ""
+"    Si encuentra problemas al seguir este tutorial, por favor envíe un mensaje a\n"
+"    `django-users`__ o ingrese al canal `#django en irc.freenode.net`__ para\n"
+"    hablar con otros usuarios de Django que podrían ayudarlo.\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:28
@@ -97,6 +101,8 @@ msgid ""
 "__ http://groups.google.com/group/django-users __ "
 "irc://irc.freenode.net/django"
 msgstr ""
+"__ http://groups.google.com/group/django-users __ "
+"irc://irc.freenode.net/django"
 
 #. type: Plain text
 #: orig/tutorial01.txt:30
@@ -105,6 +111,8 @@ msgid ""
 "Creating a project\n"
 "==================\n"
 msgstr ""
+"Crear un proyecto\n"
+"=================\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:37
@@ -115,6 +123,12 @@ msgid ""
 "instance of Django, including database configuration, Django-specific "
 "options and application-specific settings."
 msgstr ""
+"Si esta es la primera vez que usa Django, tendrá que encargarse de su "
+"configuración inicial. En particular, tendrá que auto-generar el código con "
+"el que puede iniciar un :term:`proyecto` Django -- un conjunto de "
+"configuraciones para una instancia de Django, que incluye configuración de "
+"base de datos, opciones específicas de Django, y opciones específicas de la "
+"aplicación."
 
 #. type: Plain text
 #: orig/tutorial01.txt:40
@@ -122,27 +136,34 @@ msgid ""
 "From the command line, ``cd`` into a directory where you'd like to store "
 "your code, then run the following command:"
 msgstr ""
+"Desde el intérprete de órdenes, ingrese (``cd``) al directorio en que desea "
+"ubicar su código, y luego ejecute la siguiente orden:"
+
 
 #. type: Plain text
 #: orig/tutorial01.txt:42 orig/tutorial01.txt:245 orig/tutorial01.txt:295 orig/tutorial01.txt:402 orig/tutorial01.txt:479 orig/tutorial01.txt:499
 msgid ".. code-block:: bash"
-msgstr ""
+msgstr ".. code-block:: bash"
 
 #. type: Plain text
 #: orig/tutorial01.txt:44
 #, no-wrap
 msgid "   django-admin.py startproject mysite\n"
-msgstr ""
+msgstr "   django-admin.py startproject mysite\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:46
 msgid "This will create a ``mysite`` directory in your current directory."
 msgstr ""
+"Esta orden creará un directorio llamado ``mysite`` dentro del directorio "
+"actual."
 
 #. type: Plain text
 #: orig/tutorial01.txt:48
 msgid ".. admonition:: Script name may differ in distribution packages"
 msgstr ""
+".. admonition:: El nombre del script puede diferir dependiendo de cómo se "
+"haya instalado Django"
 
 #. type: Plain text
 #: orig/tutorial01.txt:53
@@ -154,11 +175,15 @@ msgid ""
 "omitting\n"
 "   ``.py`` from each command.\n"
 msgstr ""
+"   Si instaló Django usando el administrador de paquetes de una distribución de\n"
+"   Linux (p.ej., apt-get o yum) ``django-admin.py`` puede haber sido renombrado\n"
+"   como ``django-admin``. En dicho caso, puede continuar usando esta\n"
+"   documentación, teniendo el cuidado de no escribir el ``.py`` en cada orden.\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:55
 msgid ".. admonition:: Mac OS X permissions"
-msgstr ""
+msgstr ".. admonition:: Permisos en Mac OS X"
 
 #. type: Plain text
 #: orig/tutorial01.txt:63
@@ -175,11 +200,19 @@ msgid ""
 "   </ref/django-admin>` is installed, then run the command\n"
 "   ``chmod +x django-admin.py``.\n"
 msgstr ""
+"   Si está usando Mac OS X, puede que se encuentre con el mensaje «permission\n"
+"   denied» al tratar de ejecutar ``django-admin.py startproject``. En sistemas\n"
+"   basados en Unix como Mac OS X, un fichero debe ser marcado como «ejecutable»\n"
+"   antes de poder ejecutarse como un programa. Para hacerlo, abra Terminal.app,\n"
+"   ubíquese (usando la orden ``cd``) en el directorio en donde está instalado el\n"
+"   script :doc:`django-admin.py </ref/django-admin>`, y ejecute la orden ``chmod\n"
+"   +x django-admin.py``.\n"
 
+# TODO revisar si esto se puede traducir o no
 #. type: Plain text
 #: orig/tutorial01.txt:65 orig/tutorial01.txt:207
 msgid ".. note::"
-msgstr ""
+msgstr ".. note::"
 
 #. type: Plain text
 #: orig/tutorial01.txt:70
@@ -191,6 +224,10 @@ msgid ""
 "    ``django`` (which will conflict with Django itself) or ``test`` (which\n"
 "    conflicts with a built-in Python package).\n"
 msgstr ""
+"   Debe evitar usar nombres de componentes integrados de Python o Django en sus\n"
+"   proyectos. En particular, debe abstenerse de usar nombres como ``django`` (lo\n"
+"   que crearía un conflicto con Django) o ``test`` (que entra en conflicto con\n"
+"   un paquete integrado de Python).\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:77
@@ -202,6 +239,13 @@ msgid ""
 ":doc:`django-admin.py </ref/django-admin>` from some place on your path, "
 "such as :file:`/usr/local/bin`."
 msgstr ""
+"Si instaló Django usando ``python setup.py``, :doc:`django-admin.py "
+"</ref/django-admin>` debe estar en la ruta de su sistema (system path). Si no "
+"lo está, puede encontrarlo en ``site-packages/django/bin``, en donde "
+"```site-packages``` es un directorio dentro de su instalación de Python. Se "
+"sugiere crear un enlace simbólico a :doc:`django-admin.py "
+"</ref/django-admin>` desde algún sitio que se encuentre en la ruta de su "
+"sistema, como por ejemplo :file:`/usr/local/bin`."
 
 #. type: Plain text
 #: orig/tutorial01.txt:79
