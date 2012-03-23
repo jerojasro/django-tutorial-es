@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2012-03-21 13:09-0500\n"
-"PO-Revision-Date: 2012-03-21 21:38-0500\n"
+"PO-Revision-Date: 2012-03-22 20:00-0500\n"
 "Last-Translator: root <juanf.jaramillo@opdevel.com>\n"
 "Language-Team: slec's translation team\n"
 "Language: es\n"
@@ -208,17 +208,20 @@ msgstr ""
 msgid ""
 "Start the development server\n"
 "============================\n"
-msgstr ""
+msgstr "Comenzar el servidor de desarrollo"
 
 #. type: Plain text
 #: orig/tutorial02.txt:67
 msgid "Let's start the development server and explore the admin site."
 msgstr ""
+"Comencemos el servidor de desarrollo y exploremos el sitio administrativo. "
 
 #. type: Plain text
 #: orig/tutorial02.txt:69
 msgid "Recall from Tutorial 1 that you start the development server like so:"
 msgstr ""
+"Recuerde del Turorial 1 que usted comenzó el servidor de desarrollo de la "
+"siguiente forma:"
 
 #. type: Plain text
 #: orig/tutorial02.txt:71
@@ -237,6 +240,9 @@ msgid ""
 "Now, open a Web browser and go to \"/admin/\" on your local domain -- e.g., "
 "http://127.0.0.1:8000/admin/. You should see the admin's login screen:"
 msgstr ""
+"Ahora, abra un browser y vaya a \"/admin/\" en su dominio local -- v.gr., "
+"http://127.0.0.1:8000/admin/. Verá la pantalla de inicio de sesión del "
+"administrador:"
 
 #. type: Plain text
 #: orig/tutorial02.txt:79
@@ -252,7 +258,7 @@ msgstr ""
 msgid ""
 "Enter the admin site\n"
 "====================\n"
-msgstr ""
+msgstr "Ingresar al sitio administratovo"
 
 #. type: Plain text
 #: orig/tutorial02.txt:87
@@ -262,6 +268,10 @@ msgid ""
 "can :ref:`create another one <topics-auth-creating-superusers>`.) You should "
 "see the Django admin index page:"
 msgstr ""
+"Ahora, trate de iniciar sesión. (Usted creó una cuenta de super usuario en "
+"la primera parte de este tutorial, ¿lo recuerda? Si no la ha creado o ha "
+"olvidado la contraseña, podrá :ref:`create another one <topics-auth-"
+"creating-superusers>`.) Deberá mirar la página de Administrador de Django."
 
 #. type: Plain text
 #: orig/tutorial02.txt:90
@@ -277,6 +287,8 @@ msgid ""
 "You should see a few other types of editable content, including groups, "
 "users and sites. These are core features Django ships with by default."
 msgstr ""
+"Deberá ver algunos otros tipos de edición de contenido, incluyendo grupos, "
+"usuarios y sitios. Este es el núcleo de los rasgos de Django por defecto."
 
 #. type: Plain text
 #: orig/tutorial02.txt:95
