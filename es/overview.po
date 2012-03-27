@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2012-03-26 23:21-0500\n"
-"PO-Revision-Date: 2012-03-21 21:43-0500\n"
+"PO-Revision-Date: 2012-03-27 06:42-0500\n"
 "Last-Translator: Igor Támara <igor@tamarapatino.org>\n"
 "Language-Team: slec's translation team\n"
 "Language: es\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.7.0\n"
+"X-Generator: Virtaal 0.7.1\n"
 
 #. type: Plain text
 #: orig/overview.txt:1
@@ -404,6 +404,10 @@ msgid ""
 "A dynamic admin interface: it's not just scaffolding -- it's the whole house\n"
 "============================================================================\n"
 msgstr ""
+"Una interfaz de administración dinámica: No solamente el andamiaje -- es la "
+"casa entera\n"
+"============================================================================"
+"=============="
 
 #. type: Plain text
 #: orig/overview.txt:137
@@ -413,24 +417,29 @@ msgid ""
 "admin/index>` -- a Web site that lets authenticated users add, change and "
 "delete objects. It's as easy as registering your model in the admin site::"
 msgstr ""
+"Cuando haya definido sus modelos, Django puede crear automáticamente una "
+"interfaz administrativa profesional </ref/contrib/admin/index>`, lista para "
+"producción : Un sitio web que le permite a usuarios autenticados, añadir, "
+"cambiar y eliminar objetos.  Basta con registrar su modelo con el sitio "
+"administrativo::"
 
 #. type: Plain text
 #: orig/overview.txt:139
 #, no-wrap
 msgid "    # In models.py...\n"
-msgstr ""
+msgstr "    # En models.py...\n"
 
 #. type: Plain text
 #: orig/overview.txt:141
 #, no-wrap
 msgid "    from django.db import models\n"
-msgstr ""
+msgstr "    from django.db import models\n"
 
 #. type: Plain text
 #: orig/overview.txt:150
 #, no-wrap
 msgid "    # In admin.py in the same directory...\n"
-msgstr ""
+msgstr "    # En admin.py en el mismo directorio...\n"
 
 #. type: Plain text
 #: orig/overview.txt:153
@@ -439,12 +448,14 @@ msgid ""
 "    import models\n"
 "    from django.contrib import admin\n"
 msgstr ""
+"    import models\n"
+"    from django.contrib import admin\n"
 
 #. type: Plain text
 #: orig/overview.txt:155
 #, no-wrap
 msgid "    admin.site.register(models.Article)\n"
-msgstr ""
+msgstr "    admin.site.register(models.Article)\n"
 
 #. type: Plain text
 #: orig/overview.txt:159
@@ -453,6 +464,9 @@ msgid ""
 "maybe just you -- and you don't want to have to deal with creating backend "
 "interfaces just to manage content."
 msgstr ""
+"Aquí la filosofía es que su sitio lo edita los empleados, un cliente o usted "
+"mismo, y no tiene que preocuparse por hacer interfaces de back-end para "
+"administrar su contenido."
 
 #. type: Plain text
 #: orig/overview.txt:163
@@ -462,6 +476,11 @@ msgid ""
 "can start populating data. Then, develop the way data is presented to the "
 "public."
 msgstr ""
+"Un flujo de trabajo típico al crear aplicaciones Django es crear los modelos "
+"y echar a andar el sitio administrativo tan rápido como sea posible, de "
+"forma que el personal(o los clientes) puedan comenzar a diligenciar datos.  "
+"Posteriormente desarrollar la forma como los datos serán presentados al "
+"público."
 
 #. type: Plain text
 #: orig/overview.txt:165
@@ -470,6 +489,8 @@ msgid ""
 "Design your URLs\n"
 "================\n"
 msgstr ""
+"Diseñe sus URLs\n"
+"===============\n"
 
 #. type: Plain text
 #: orig/overview.txt:170
@@ -478,6 +499,9 @@ msgid ""
 "application. Django encourages beautiful URL design and doesn't put any "
 "cruft in URLs, like ``.php`` or ``.asp``."
 msgstr ""
+"Un detalle importante en una aplicación web de gran calidad es un esquema de "
+"URLs limpio y elegante.  Django anima el diseño de URLs hermosas y no añade "
+"cosas como ``.php`` o ``.asp``."
 
 #. type: Plain text
 #: orig/overview.txt:175
@@ -487,6 +511,11 @@ msgid ""
 "mapping between URL patterns and Python callback functions. URLconfs also "
 "serve to decouple URLs from Python code."
 msgstr ""
+"Para diseñar URLs para una aplicación, se crea un módulo de Python llamado "
+":doc:`URLconf </topics/http/urls>`.  Es una tabla de contenidos para su "
+"aplicación que contiene una relación sencilla entre patrones de URLs y "
+"funciones de respuesta en Python. Las URLconfs también sirven para "
+"desacoplar las URLs de su código Python."
 
 #. type: Plain text
 #: orig/overview.txt:178
@@ -494,12 +523,14 @@ msgid ""
 "Here's what a URLconf might look like for the ``Reporter``/``Article`` "
 "example above::"
 msgstr ""
+"A continuación mostramos cómo podría lucir un URLconf para el ejemplo "
+"``Reportero``/``Artículo`` anterior"
 
 #. type: Plain text
 #: orig/overview.txt:180
 #, no-wrap
 msgid "    from django.conf.urls import patterns, url, include\n"
-msgstr ""
+msgstr "    from django.conf.urls import patterns, url, include\n"
 
 #. type: Plain text
 #: orig/overview.txt:186
@@ -511,6 +542,11 @@ msgid ""
 "        (r'^articles/(\\d{4})/(\\d{2})/(\\d+)/$', 'news.views.article_detail'),\n"
 "    )\n"
 msgstr ""
+"    urlpatterns = patterns('',\n"
+"        (r'^articles/(\\d{4})/$', 'news.views.year_archive'),\n"
+"        (r'^articles/(\\d{4})/(\\d{2})/$', 'news.views.month_archive'),\n"
+"        (r'^articles/(\\d{4})/(\\d{2})/(\\d+)/$', 'news.views.article_detail'),\n"
+"    )\n"
 
 #. type: Plain text
 #: orig/overview.txt:194
@@ -523,6 +559,13 @@ msgid ""
 "special-case 404 view.)  This is blazingly fast, because the regular "
 "expressions are compiled at load time."
 msgstr ""
+"El código anterior relaciona URLs, como expresiones regulares sencillas, al "
+"lugar donde se encuentran las funciones Python de respuesta (\"views\").  Las "
+"expresiones regulares usan paréntesis para \"capturar\" valores de las URLs.  "
+"Cuando un usuario solicita una página, Django evalúa cada patrón, en orden y "
+"se detiene en el primero que concuerda con el URL solicitado. (Si ninguno "
+"concuerda, Django invoca una vista especial 404.)  Es increíblemente rápido, "
+"porque las expresiones regulares se precompilan al momento de carga."
 
 #. type: Plain text
 #: orig/overview.txt:198
@@ -531,6 +574,10 @@ msgid ""
 "which is a simple Python function. Each view gets passed a request object -- "
 "which contains request metadata -- and the values captured in the regex."
 msgstr ""
+"Una vez que la expresión regular coincide, Django importa y llama la función "
+"dada, que es una función sencilla en Python.  Cada vista recibe un objeto "
+"request (Que contiene los metadatos de la solicitud) y los valores "
+"capturados en la expresión regular."
 
 #. type: Plain text
 #: orig/overview.txt:202
@@ -539,6 +586,9 @@ msgid ""
 "Django would call the function ``news.views.article_detail(request, '2005', "
 "'05', '39323')``."
 msgstr ""
+"Por ejemplo, si un usuario solicitó la URL \"/articles/2005/05/39323/\", "
+"Django invocaría la función ``news.views.article_detail(request, '2005', "
+"'05', '39323')``."
 
 #. type: Plain text
 #: orig/overview.txt:204
@@ -547,6 +597,8 @@ msgid ""
 "Write your views\n"
 "================\n"
 msgstr ""
+"Escriba sus vistas\n"
+"==================\n"
 
 #. type: Plain text
 #: orig/overview.txt:210
@@ -556,6 +608,10 @@ msgid ""
 "page, or raising an exception such as :class:`~django.http.Http404`.  The "
 "rest is up to you."
 msgstr ""
+"Cada vista se encarga de hacer una o dos cosas: Retornar un objeto "
+":class:`~django.http.HttpResponse` que incluye el contenido de la página "
+"solicitada, o disparar una excepción tal como :class:`~django.http.Http404`. "
+" El resto depende de usted."
 
 #. type: Plain text
 #: orig/overview.txt:214
@@ -564,6 +620,9 @@ msgid ""
 "template and renders the template with the retrieved data. Here's an example "
 "view for ``year_archive`` from above::"
 msgstr ""
+"Generalmente, una vista recupera datos a partir de los parámetros, carga una "
+"plantilla y la muestra con la información recuperada. A continuación una "
+"vista de ejemplo para ``year_archive`` del ejemplo anterior::"
 
 #. type: Plain text
 #: orig/overview.txt:218
@@ -573,6 +632,10 @@ msgid ""
 "        a_list = Article.objects.filter(pub_date__year=year)\n"
 "        return render_to_response('news/year_archive.html', {'year': year, 'article_list': a_list})\n"
 msgstr ""
+"    def year_archive(request, year):\n"
+"        a_list = Article.objects.filter(pub_date__year=year)\n"
+"        return render_to_response('news/year_archive.html', {'year': year, "
+"'article_list': a_list})\n"
 
 #. type: Plain text
 #: orig/overview.txt:222
@@ -581,6 +644,9 @@ msgid ""
 "has several powerful features but strives to stay simple enough for non-"
 "programmers to use."
 msgstr ""
+"Este ejemplo usa el :doc:`sistema de plantillas </topics/templates>`, que "
+"cuenta con características poderosas pero se mantiene lo suficientemente "
+"sencillo para que los no programadores puedan usarlo."
 
 #. type: Plain text
 #: orig/overview.txt:224
@@ -589,11 +655,13 @@ msgid ""
 "Design your templates\n"
 "=====================\n"
 msgstr ""
+"Diseñe sus plantillas\n"
+"=====================\n"
 
 #. type: Plain text
 #: orig/overview.txt:227
 msgid "The code above loads the ``news/year_archive.html`` template."
-msgstr ""
+msgstr "El código anterior carga la plantilla ``news/year_archive.html``."
 
 #. type: Plain text
 #: orig/overview.txt:232
@@ -603,6 +671,11 @@ msgid ""
 "to check for templates. If a template doesn't exist in the first directory, "
 "it checks the second, and so on."
 msgstr ""
+"Django tiene una ruta de búsqueda de plantillas, que le permite minimizar "
+"redundancia entre plantillas.  En su archivo de configuración de Django se "
+"especifica una lista de directorios para buscar plantillas.  Si una "
+"plantilla no se encuentra en el primero, se busca en el segundo y así "
+"sucesivamente."
 
 #. type: Plain text
 #: orig/overview.txt:235
@@ -610,23 +683,25 @@ msgid ""
 "Let's say the ``news/year_archive.html`` template was found. Here's what "
 "that might look like:"
 msgstr ""
+"Supongamos que se encontró la plantilla ``news/year_archive.html``. Así es "
+"como podría lucir:"
 
 #. type: Plain text
 #: orig/overview.txt:237 orig/overview.txt:276
 msgid ".. code-block:: html+django"
-msgstr ""
+msgstr ".. code-block:: html+django"
 
 #. type: Plain text
 #: orig/overview.txt:239
 #, no-wrap
 msgid "    {% extends \"base.html\" %}\n"
-msgstr ""
+msgstr "    {% extends \"base.html\" %}\n"
 
 #. type: Plain text
 #: orig/overview.txt:241
 #, no-wrap
 msgid "    {% block title %}Articles for {{ year }}{% endblock %}\n"
-msgstr ""
+msgstr "    {% block title %}Artículos del {{ year }}{% endblock %}\n"
 
 #. type: Plain text
 #: orig/overview.txt:244
@@ -635,6 +710,8 @@ msgid ""
 "    {% block content %}\n"
 "    <h1>Articles for {{ year }}</h1>\n"
 msgstr ""
+"    {% block content %}\n"
+"    <h1>Artículos del {{ year }}</h1>\n"
 
 #. type: Plain text
 #: orig/overview.txt:251
@@ -647,6 +724,12 @@ msgid ""
 "    {% endfor %}\n"
 "    {% endblock %}\n"
 msgstr ""
+"    {% for article in article_list %}\n"
+"        <p>{{ article.headline }}</p>\n"
+"        <p>Por {{ article.reporter.full_name }}</p>\n"
+"        <p>Publicado {{ article.pub_date|date:\"F j, Y\" }}</p>\n"
+"    {% endfor %}\n"
+"    {% endblock %}\n"
 
 #. type: Plain text
 #: orig/overview.txt:256
@@ -656,6 +739,10 @@ msgid ""
 "aren't used only for attribute lookup: They also can do dictionary-key "
 "lookup, index lookup and function calls."
 msgstr ""
+"Las variables están rodeadas por corchetes dobles. ``{{ article.headline "
+"}}`` significa \"Muestre el valor del titular del objeto artículo\".  Pero los "
+"puntos no se usan únicamente para atributos: También pueden servir como "
+"claves de diccionarios, índices y llamados a funciones."
 
 #. type: Plain text
 #: orig/overview.txt:262
@@ -666,6 +753,12 @@ msgid ""
 "Python datetime object in the given format (as found in PHP's date function; "
 "yes, there is one good idea in PHP)."
 msgstr ""
+"Tenga en cuenta que ``{{ article.pub_date|date:\"F j, Y\" }}`` usa una "
+"\"interconexión\" tipo Unix (el carácter \"|\").  Es a lo que llamamos un filtro "
+"de plantilla, y es una forma para filtrar valores de una variable.  En este "
+"caso, el filtro fecha da formato a un objeto de dato Python hora fecha en "
+"un formato dado(como se especifica en la función fecha de PHP; si, hay una "
+"buena idea en PHP)."
 
 #. type: Plain text
 #: orig/overview.txt:266
@@ -674,6 +767,9 @@ msgid ""
 "filters. You can write custom template tags, which run custom Python code "
 "behind the scenes."
 msgstr ""
+"Puede enlazar tantos filtros como desee.  Puede crear sus propios filtros. "
+"Puede crear etiquetas de plantilla propias, que ejecutan código Python "
+"propio tras bambalinas."
 
 #. type: Plain text
 #: orig/overview.txt:272
@@ -685,11 +781,18 @@ msgid ""
 "redundancy in templates: each template has to define only what's unique to "
 "that template."
 msgstr ""
+"Finalmente, Django usa el concepto de \"herencia de plantillas\": Eso es lo "
+"que ``{% extends \"base.html\" %}`` hace.  Significa \"Primero llame la "
+"plantilla llamada 'base', que tiene definidos varios bloques, y llene los "
+"bloques con estos bloques.\"  En pocas palabras, le permite eliminar "
+"dramáticamente redundancia en plantillas: cada plantilla tiene que definir "
+"únicamente lo particular de la plantilla."
 
 #. type: Plain text
 #: orig/overview.txt:274
 msgid "Here's what the \"base.html\" template might look like:"
 msgstr ""
+"A continuación un ejemplo de cómo podría lucir la plantilla \"base.html\":"
 
 #. type: Plain text
 #: orig/overview.txt:286
@@ -705,6 +808,15 @@ msgid ""
 "    </body>\n"
 "    </html>\n"
 msgstr ""
+"    <html>\n"
+"    <head>\n"
+"        <title>{% block title %}{% endblock %}</title>\n"
+"    </head>\n"
+"    <body>\n"
+"        <img src=\"sitelogo.gif\" alt=\"Logo\" />\n"
+"        {% block content %}{% endblock %}\n"
+"    </body>\n"
+"    </html>\n"
 
 #. type: Plain text
 #: orig/overview.txt:290
@@ -713,6 +825,10 @@ msgid ""
 "logo), and provides \"holes\" for child templates to fill. This makes a site "
 "redesign as easy as changing a single file -- the base template."
 msgstr ""
+"Sencillamente define el visual del sitio (con el logotipo del sitio), y "
+"provee \"huecos\" para que las plantillas hijas los llenen.  Esto hace que "
+"rediseñar un sitio resulte tan sencillo como cambiar un único fichero : la "
+"plantilla base."
 
 #. type: Plain text
 #: orig/overview.txt:295
@@ -722,6 +838,10 @@ msgid ""
 "technique to create strikingly different cell-phone editions of sites -- "
 "simply by creating a new base template."
 msgstr ""
+"También le permite crear múltiples versiones de un sitio, con diferentes "
+"plantillas base, reusando las hijas.  Los creadores de Django han usado esta "
+"técnica para crear versiones para teléfonos celulares impresionantemente "
+"distintas, únicamente creando una nueva plantilla base."
 
 #. type: Plain text
 #: orig/overview.txt:303
@@ -734,6 +854,14 @@ msgid ""
 "files off disk, or anything you want. Each piece of Django -- models, views, "
 "templates -- is decoupled from the next."
 msgstr ""
+"Tenga en cuenta que no tiene que usar el sistema de plantillas de Django si "
+"prefiere otro sistema.  Aunque el sistema de plantillas de Django se "
+"encuentra sumamente bien integrado con la capa de modelos de Django, no "
+"estamos forzándolo a usarlo.  Así mismo, tampoco tiene que emplear el API de "
+"bases de datos de Django.  Puede usar otra capa de abstracción de bases de "
+"datos, puede leer archivos XML, puede leer del disco o de donde desee.  Cada "
+"pieza de Django : modelos, vistas, plantillas está desacoplada de la "
+"siguiente."
 
 #. type: Plain text
 #: orig/overview.txt:305
