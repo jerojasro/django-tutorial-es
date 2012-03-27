@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-03-21 13:09-0500\n"
+"POT-Creation-Date: 2012-03-26 23:31-0500\n"
 "PO-Revision-Date: 2012-03-22 20:10-0500\n"
 "Last-Translator: root <juanf.jaramillo@opdevel.com>\n"
 "Language-Team: slec's translation team\n"
@@ -33,8 +33,8 @@ msgstr "Escribir su primera aplicación de Django, parte 2"
 #. type: Plain text
 #: orig/tutorial02.txt:8
 msgid ""
-"This tutorial begins where :doc:`Tutorial 1 </intro/tutorial01>` left "
-"off. We're continuing the Web-poll application and will focus on Django's "
+"This tutorial begins where :doc:`Tutorial 1 </intro/tutorial01>` left off. "
+"We're continuing the Web-poll application and will focus on Django's "
 "automatically-generated admin site."
 msgstr ""
 "Este tutorial comienza en donde :doc:`Tutorial 1 </intro/tutorial01>` "
@@ -50,47 +50,32 @@ msgstr ""
 #: orig/tutorial02.txt:14
 #, no-wrap
 msgid ""
-"    Generating admin sites for your staff or clients to add, change and "
-"delete\n"
+"    Generating admin sites for your staff or clients to add, change and delete\n"
 "    content is tedious work that doesn't require much creativity. For that\n"
-"    reason, Django entirely automates creation of admin interfaces for "
-"models.\n"
-msgstr ""
-"    Generar sitios administrativos para su equipo o clientes para "
-"adicionar, cambiar y borrar contenido es un trabajo tedioso que no requiere "
-"creatividad. Por tal razón, Django automatiza totalmente la creación de "
-"interfaces de administración para los modelos."
+"    reason, Django entirely automates creation of admin interfaces for models.\n"
+msgstr "    Generar sitios administrativos para su equipo o clientes para adicionar, cambiar y borrar contenido es un trabajo tedioso que no requiere creatividad. Por tal razón, Django automatiza totalmente la creación de interfaces de administración para los modelos."
 
 #. type: Plain text
 #: orig/tutorial02.txt:20
 #, no-wrap
 msgid ""
-"    Django was written in a newsroom environment, with a very clear "
-"separation\n"
-"    between \"content publishers\" and the \"public\" site. Site managers "
-"use the\n"
-"    system to add news stories, events, sports scores, etc., and that "
-"content is\n"
+"    Django was written in a newsroom environment, with a very clear separation\n"
+"    between \"content publishers\" and the \"public\" site. Site managers use the\n"
+"    system to add news stories, events, sports scores, etc., and that content is\n"
 "    displayed on the public site. Django solves the problem of creating a\n"
 "    unified interface for site administrators to edit content.\n"
-msgstr ""
-"    Django fue escrito en un ambiente de una sala de prensa, con una muy "
-"clara separación entre \"contenido editorial\" y el sitio \"publico\". Los "
-"administradores del sito usan el sistema para adicionar nuevos relatos, "
-"eventos, resultados deportivos, etc., y el contenido es mostrado en el sitio "
-"público. Django resuelve el problema de crear una interface unificada para "
-"que el administrador del sitio edite el contenido."
+msgstr "    Django fue escrito en un ambiente de una sala de prensa, con una muy clara separación entre \"contenido editorial\" y el sitio \"publico\". Los administradores del sito usan el sistema para adicionar nuevos relatos, eventos, resultados deportivos, etc., y el contenido es mostrado en el sitio público. Django resuelve el problema de crear una interface unificada para que el administrador del sitio edite el contenido."
 
 #. type: Plain text
 #: orig/tutorial02.txt:23
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "    The admin isn't necessarily intended to be used by site visitors; it's for\n"
+#| "    site managers.\n"
 msgid ""
-"    The admin isn't necessarily intended to be used by site visitors; it's "
-"for\n"
-"    site managers.\n"
-msgstr ""
-"    El administrador no es necesariamente utilizado por los que visitan el "
-"sitio; este es para el administrador del sitio."
+"    The admin isn't intended to be used by site visitors. It's for site\n"
+"    managers.\n"
+msgstr "    El administrador no es necesariamente utilizado por los que visitan el sitio; este es para el administrador del sitio."
 
 #. type: Plain text
 #: orig/tutorial02.txt:25
@@ -103,32 +88,37 @@ msgstr "Activar el sitio administrativo"
 #. type: Plain text
 #: orig/tutorial02.txt:29
 msgid ""
-"The Django admin site is not activated by default -- it's an opt-in "
-"thing. To activate the admin site for your installation, do these three "
-"things:"
+"The Django admin site is not activated by default -- it's an opt-in thing. "
+"To activate the admin site for your installation, do these three things:"
 msgstr ""
-"El sitio administrativo de Django no está activado por defecto -- esto es un opt-"
-"in. Para activar el sitio administrador en su instalación, haga estas tres "
-"cosas:"
+"El sitio administrativo de Django no está activado por defecto -- esto es un "
+"opt-in. Para activar el sitio administrador en su instalación, haga estas "
+"tres cosas:"
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/tutorial02.txt:31
-msgid "Add ``\"django.contrib.admin\"`` to your :setting:`INSTALLED_APPS` setting."
+#, fuzzy
+#| msgid ""
+#| "Add ``\"django.contrib.admin\"`` to your :setting:`INSTALLED_APPS` "
+#| "setting."
+msgid ""
+"Uncomment ``\"django.contrib.admin\"`` in the :setting:`INSTALLED_APPS` "
+"setting."
 msgstr ""
-"Adicione ``\"django.contrib.admin\"`` a su configuración "
-":setting:`INSTALLED_APPS`."
+"Adicione ``\"django.contrib.admin\"`` a su configuración :setting:"
+"`INSTALLED_APPS`."
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/tutorial02.txt:34
 msgid ""
-"Run ``python manage.py syncdb``. Since you have added a new application to "
-":setting:`INSTALLED_APPS`, the database tables need to be updated."
+"Run ``python manage.py syncdb``. Since you have added a new application to :"
+"setting:`INSTALLED_APPS`, the database tables need to be updated."
 msgstr ""
 "Ejecute ``python manage.py syncdb``. Ya que ha adicionado una nueva "
 "aplicación a :setting:`INSTALLED_APPS`, las tablas de al base de datos "
 "necesitan ser actualizadas."
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/tutorial02.txt:40
 msgid ""
 "Edit your ``mysite/urls.py`` file and uncomment the lines that reference the "
@@ -147,60 +137,57 @@ msgstr ""
 #. type: Plain text
 #: orig/tutorial02.txt:42
 #, no-wrap
-msgid "      .. parsed-literal::\n"
+msgid "  .. parsed-literal::\n"
 msgstr ""
 
 #. type: Plain text
 #: orig/tutorial02.txt:44
 #, no-wrap
-msgid "          from django.conf.urls.defaults import *\n"
+msgid "      from django.conf.urls import patterns, include, url\n"
 msgstr ""
 
 #. type: Plain text
 #: orig/tutorial02.txt:48
 #, no-wrap
 msgid ""
-"          # Uncomment the next two lines to enable the admin:\n"
-"          **from django.contrib import admin**\n"
-"          **admin.autodiscover()**\n"
+"      # Uncomment the next two lines to enable the admin:\n"
+"      **from django.contrib import admin**\n"
+"      **admin.autodiscover()**\n"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:52
+#: orig/tutorial02.txt:53
 #, no-wrap
 msgid ""
-"          urlpatterns = patterns('',\n"
-"              # Example:\n"
-"              # (r'^mysite/', include('mysite.foo.urls')),\n"
+"      urlpatterns = patterns('',\n"
+"          # Examples:\n"
+"          # url(r'^$', '{{ project_name }}.views.home', name='home'),\n"
+"          # url(r'^{{ project_name }}/', include('{{ project_name }}.foo.urls')),\n"
 msgstr ""
 
 #. type: Plain text
 #: orig/tutorial02.txt:56
 #, no-wrap
 msgid ""
-"              # Uncomment the admin/doc line below and add "
-"'django.contrib.admindocs'\n"
-"              # to INSTALLED_APPS to enable admin documentation:\n"
-"              # (r'^admin/doc/', "
-"include('django.contrib.admindocs.urls')),\n"
+"          # Uncomment the admin/doc line below to enable admin documentation:\n"
+"          # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),\n"
 msgstr ""
 
 #. type: Plain text
 #: orig/tutorial02.txt:60
 #, no-wrap
 msgid ""
-"              # Uncomment the next line to enable the admin:\n"
-"              **(r'^admin/', include(admin.site.urls)),**\n"
-"          )\n"
+"          # Uncomment the next line to enable the admin:\n"
+"          **url(r'^admin/', include(admin.site.urls)),**\n"
+"      )\n"
 msgstr ""
 
 #. type: Plain text
 #: orig/tutorial02.txt:62
-#, no-wrap
-msgid "      (The bold lines are the ones that needed to be uncommented.)\n"
-msgstr ""
-"      (Las líneas resaltadas son las que se necesita que no estén "
-"comentadas.)"
+#, fuzzy, no-wrap
+#| msgid "      (The bold lines are the ones that needed to be uncommented.)\n"
+msgid "  (The bold lines are the ones that needed to be uncommented.)\n"
+msgstr "      (Las líneas resaltadas son las que se necesita que no estén comentadas.)"
 
 #. type: Plain text
 #: orig/tutorial02.txt:64
@@ -254,6 +241,37 @@ msgstr ""
 
 #. type: Plain text
 #: orig/tutorial02.txt:81
+msgid ".. admonition:: Doesn't match what you see?"
+msgstr ""
+
+#. type: Plain text
+#: orig/tutorial02.txt:84
+#, no-wrap
+msgid ""
+"    If at this point, instead of the above login page, you get an error\n"
+"    page reporting something like::\n"
+msgstr ""
+
+#. type: Plain text
+#: orig/tutorial02.txt:88
+#, no-wrap
+msgid ""
+"        ImportError at /admin/\n"
+"        cannot import name patterns\n"
+"        ...\n"
+msgstr ""
+
+#. type: Plain text
+#: orig/tutorial02.txt:92
+#, no-wrap
+msgid ""
+"    then you're probably using a version of Django that doesn't match this\n"
+"    tutorial version. You'll want to either switch to the older tutorial or the\n"
+"    newer Django version.\n"
+msgstr ""
+
+#. type: Plain text
+#: orig/tutorial02.txt:94
 #, no-wrap
 msgid ""
 "Enter the admin site\n"
@@ -261,7 +279,7 @@ msgid ""
 msgstr "Ingresar al sitio administratovo"
 
 #. type: Plain text
-#: orig/tutorial02.txt:87
+#: orig/tutorial02.txt:100
 msgid ""
 "Now, try logging in. (You created a superuser account in the first part of "
 "this tutorial, remember? If you didn't create one or forgot the password you "
@@ -270,11 +288,11 @@ msgid ""
 msgstr ""
 "Ahora, trate de iniciar sesión. (Usted creó una cuenta de super usuario en "
 "la primera parte de este tutorial, ¿lo recuerda? Si no la ha creado o ha "
-"olvidado la contraseña, podrá :ref:`create another one <topics-auth-"
-"creating-superusers>`.) Deberá mirar la página de Administrador de Django."
+"olvidado la contraseña, podrá :ref:`create another one <topics-auth-creating-"
+"superusers>`.) Deberá mirar la página de Administrador de Django."
 
 #. type: Plain text
-#: orig/tutorial02.txt:90
+#: orig/tutorial02.txt:103
 #, no-wrap
 msgid ""
 ".. image:: _images/admin02t.png\n"
@@ -282,16 +300,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:93
+#: orig/tutorial02.txt:106
+#, fuzzy
+#| msgid ""
+#| "You should see a few other types of editable content, including groups, "
+#| "users and sites. These are core features Django ships with by default."
 msgid ""
-"You should see a few other types of editable content, including groups, "
-"users and sites. These are core features Django ships with by default."
+"You should see a few types of editable content, including groups, users and "
+"sites. These are core features Django ships with by default."
 msgstr ""
 "Deberá ver algunos otros tipos de edición de contenido, incluyendo grupos, "
 "usuarios y sitios. Este es el núcleo de los rasgos de Django por defecto."
 
 #. type: Plain text
-#: orig/tutorial02.txt:95
+#: orig/tutorial02.txt:108
 #, no-wrap
 msgid ""
 "Make the poll app modifiable in the admin\n"
@@ -299,14 +321,14 @@ msgid ""
 msgstr "Hacer la aplicación de sondeo modificable en el admi"
 
 #. type: Plain text
-#: orig/tutorial02.txt:98
+#: orig/tutorial02.txt:111
 msgid "But where's our poll app? It's not displayed on the admin index page."
 msgstr ""
 "Pero ¿dónde está nuestra aplicación de sondeo? Esta no se despliega en el la "
 "página del índice del administrativo."
 
 #. type: Plain text
-#: orig/tutorial02.txt:102
+#: orig/tutorial02.txt:115
 msgid ""
 "Just one thing to do: We need to tell the admin that ``Poll`` objects have "
 "an admin interface. To do this, create a file called ``admin.py`` in your "
@@ -318,7 +340,7 @@ msgstr ""
 "luzca como esto::"
 
 #. type: Plain text
-#: orig/tutorial02.txt:105
+#: orig/tutorial02.txt:118
 #, no-wrap
 msgid ""
 "    from polls.models import Poll\n"
@@ -326,13 +348,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:107
+#: orig/tutorial02.txt:120
 #, no-wrap
 msgid "    admin.site.register(Poll)\n"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:111
+#: orig/tutorial02.txt:124
 msgid ""
 "You'll need to restart the development server to see your changes. Normally, "
 "the server auto-reloads code every time you modify a file, but the action of "
@@ -344,7 +366,7 @@ msgstr ""
 "lógica de auto recarga."
 
 #. type: Plain text
-#: orig/tutorial02.txt:113
+#: orig/tutorial02.txt:126
 #, no-wrap
 msgid ""
 "Explore the free admin functionality\n"
@@ -352,14 +374,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:117
+#: orig/tutorial02.txt:130
 msgid ""
 "Now that we've registered ``Poll``, Django knows that it should be displayed "
 "on the admin index page:"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:120
+#: orig/tutorial02.txt:133
 #, no-wrap
 msgid ""
 ".. image:: _images/admin03t.png\n"
@@ -367,7 +389,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:124
+#: orig/tutorial02.txt:137
 msgid ""
 "Click \"Polls.\" Now you're at the \"change list\" page for polls. This page "
 "displays all the polls in the database and lets you choose one to change "
@@ -375,7 +397,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:127 orig/tutorial02.txt:317
+#: orig/tutorial02.txt:140 orig/tutorial02.txt:335
 #, no-wrap
 msgid ""
 ".. image:: _images/admin04t.png\n"
@@ -383,12 +405,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:129
+#: orig/tutorial02.txt:142
 msgid "Click the \"What's up?\" poll to edit it:"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:132
+#: orig/tutorial02.txt:145
 #, no-wrap
 msgid ""
 ".. image:: _images/admin05t.png\n"
@@ -396,26 +418,26 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:134
+#: orig/tutorial02.txt:147
 msgid "Things to note here:"
 msgstr ""
 
-#. type: Bullet: '    * '
-#: orig/tutorial02.txt:136
+#. type: Bullet: '* '
+#: orig/tutorial02.txt:149
 msgid "The form is automatically generated from the Poll model."
 msgstr ""
 
-#. type: Bullet: '    * '
-#: orig/tutorial02.txt:141
+#. type: Bullet: '* '
+#: orig/tutorial02.txt:154
 msgid ""
-"The different model field types (:class:`~django.db.models.DateTimeField`, "
-":class:`~django.db.models.CharField`) correspond to the appropriate HTML "
+"The different model field types (:class:`~django.db.models.DateTimeField`, :"
+"class:`~django.db.models.CharField`) correspond to the appropriate HTML "
 "input widget. Each type of field knows how to display itself in the Django "
 "admin."
 msgstr ""
 
-#. type: Bullet: '    * '
-#: orig/tutorial02.txt:145
+#. type: Bullet: '* '
+#: orig/tutorial02.txt:158
 msgid ""
 "Each :class:`~django.db.models.DateTimeField` gets free JavaScript "
 "shortcuts. Dates get a \"Today\" shortcut and calendar popup, and times get "
@@ -423,38 +445,47 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:147
+#: orig/tutorial02.txt:160
 msgid "The bottom part of the page gives you a couple of options:"
 msgstr ""
 
-#. type: Bullet: '    * '
-#: orig/tutorial02.txt:150
+#. type: Bullet: '* '
+#: orig/tutorial02.txt:163
 msgid ""
 "Save -- Saves changes and returns to the change-list page for this type of "
 "object."
 msgstr ""
 
-#. type: Bullet: '    * '
-#: orig/tutorial02.txt:153
+#. type: Bullet: '* '
+#: orig/tutorial02.txt:166
 msgid ""
 "Save and continue editing -- Saves changes and reloads the admin page for "
 "this object."
 msgstr ""
 
-#. type: Bullet: '    * '
-#: orig/tutorial02.txt:156
+#. type: Bullet: '* '
+#: orig/tutorial02.txt:169
 msgid ""
 "Save and add another -- Saves changes and loads a new, blank form for this "
 "type of object."
 msgstr ""
 
-#. type: Bullet: '    * '
-#: orig/tutorial02.txt:158
+#. type: Bullet: '* '
+#: orig/tutorial02.txt:171
 msgid "Delete -- Displays a delete confirmation page."
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:163
+#: orig/tutorial02.txt:176
+msgid ""
+"If the value of \"Date published\" doesn't match the time when you created "
+"the poll in Tutorial 1, it probably means you forgot to set the correct "
+"value for the :setting:`TIME_ZONE` setting. Change it, reload the page and "
+"check that the correct value appears."
+msgstr ""
+
+#. type: Plain text
+#: orig/tutorial02.txt:181
 msgid ""
 "Change the \"Date published\" by clicking the \"Today\" and \"Now\" "
 "shortcuts. Then click \"Save and continue editing.\" Then click \"History\" "
@@ -464,7 +495,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:166
+#: orig/tutorial02.txt:184
 #, no-wrap
 msgid ""
 ".. image:: _images/admin06t.png\n"
@@ -472,7 +503,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:168
+#: orig/tutorial02.txt:186
 #, no-wrap
 msgid ""
 "Customize the admin form\n"
@@ -480,7 +511,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:175
+#: orig/tutorial02.txt:193
 msgid ""
 "Take a few minutes to marvel at all the code you didn't have to write. By "
 "registering the Poll model with ``admin.site.register(Poll)``, Django was "
@@ -490,14 +521,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:178
+#: orig/tutorial02.txt:196
 msgid ""
 "Let's see how this works by re-ordering the fields on the edit form. Replace "
 "the ``admin.site.register(Poll)`` line with::"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:181
+#: orig/tutorial02.txt:199
 #, no-wrap
 msgid ""
 "    class PollAdmin(admin.ModelAdmin):\n"
@@ -505,13 +536,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:183 orig/tutorial02.txt:207 orig/tutorial02.txt:280
+#: orig/tutorial02.txt:201 orig/tutorial02.txt:225 orig/tutorial02.txt:298
 #, no-wrap
 msgid "    admin.site.register(Poll, PollAdmin)\n"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:187
+#: orig/tutorial02.txt:205
 msgid ""
 "You'll follow this pattern -- create a model admin object, then pass it as "
 "the second argument to ``admin.site.register()`` -- any time you need to "
@@ -519,14 +550,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:190
+#: orig/tutorial02.txt:208
 msgid ""
 "This particular change above makes the \"Publication date\" come before the "
 "\"Question\" field:"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:193
+#: orig/tutorial02.txt:211
 #, no-wrap
 msgid ""
 ".. image:: _images/admin07.png\n"
@@ -534,21 +565,21 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:196
+#: orig/tutorial02.txt:214
 msgid ""
 "This isn't impressive with only two fields, but for admin forms with dozens "
 "of fields, choosing an intuitive order is an important usability detail."
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:199
+#: orig/tutorial02.txt:217
 msgid ""
 "And speaking of forms with dozens of fields, you might want to split the "
 "form up into fieldsets::"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:205
+#: orig/tutorial02.txt:223
 #, no-wrap
 msgid ""
 "    class PollAdmin(admin.ModelAdmin):\n"
@@ -559,14 +590,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:210
+#: orig/tutorial02.txt:228
 msgid ""
 "The first element of each tuple in ``fieldsets`` is the title of the "
 "fieldset.  Here's what our form looks like now:"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:213
+#: orig/tutorial02.txt:231
 #, no-wrap
 msgid ""
 ".. image:: _images/admin08t.png\n"
@@ -574,28 +605,27 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:218
+#: orig/tutorial02.txt:236
 msgid ""
-"You can assign arbitrary HTML classes to each fieldset. Django provides a "
-"``\"collapse\"`` class that displays a particular fieldset initially "
+"You can assign arbitrary HTML classes to each fieldset. Django provides a ``"
+"\"collapse\"`` class that displays a particular fieldset initially "
 "collapsed.  This is useful when you have a long form that contains a number "
 "of fields that aren't commonly used::"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:224
+#: orig/tutorial02.txt:242
 #, no-wrap
 msgid ""
 "        class PollAdmin(admin.ModelAdmin):\n"
 "            fieldsets = [\n"
 "                (None,               {'fields': ['question']}),\n"
-"                ('Date information', {'fields': ['pub_date'], 'classes': "
-"['collapse']}),\n"
+"                ('Date information', {'fields': ['pub_date'], 'classes': ['collapse']}),\n"
 "            ]\n"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:227
+#: orig/tutorial02.txt:245
 #, no-wrap
 msgid ""
 ".. image:: _images/admin09.png\n"
@@ -603,7 +633,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:229
+#: orig/tutorial02.txt:247
 #, no-wrap
 msgid ""
 "Adding related objects\n"
@@ -611,45 +641,45 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:233
+#: orig/tutorial02.txt:251
 msgid ""
 "OK, we have our Poll admin page. But a ``Poll`` has multiple ``Choices``, "
 "and the admin page doesn't display choices."
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:235
+#: orig/tutorial02.txt:253
 msgid "Yet."
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:238
+#: orig/tutorial02.txt:256
 msgid ""
 "There are two ways to solve this problem. The first is to register "
 "``Choice`` with the admin just as we did with ``Poll``. That's easy::"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:240
+#: orig/tutorial02.txt:258
 #, no-wrap
 msgid "    from polls.models import Choice\n"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:242
+#: orig/tutorial02.txt:260
 #, no-wrap
 msgid "    admin.site.register(Choice)\n"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:245
+#: orig/tutorial02.txt:263
 msgid ""
-"Now \"Choices\" is an available option in the Django admin. The \"Add "
-"choice\" form looks like this:"
+"Now \"Choices\" is an available option in the Django admin. The \"Add choice"
+"\" form looks like this:"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:248
+#: orig/tutorial02.txt:266
 #, no-wrap
 msgid ""
 ".. image:: _images/admin10.png\n"
@@ -657,7 +687,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:253
+#: orig/tutorial02.txt:271
 msgid ""
 "In that form, the \"Poll\" field is a select box containing every poll in "
 "the database. Django knows that a :class:`~django.db.models.ForeignKey` "
@@ -666,7 +696,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:260
+#: orig/tutorial02.txt:278
 msgid ""
 "Also note the \"Add Another\" link next to \"Poll.\" Every object with a "
 "``ForeignKey`` relationship to another gets this for free. When you click "
@@ -677,7 +707,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:264
+#: orig/tutorial02.txt:282
 msgid ""
 "But, really, this is an inefficient way of adding Choice objects to the "
 "system.  It'd be better if you could add a bunch of Choices directly when "
@@ -685,14 +715,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:267
+#: orig/tutorial02.txt:285
 msgid ""
 "Remove the ``register()`` call for the Choice model. Then, edit the ``Poll`` "
 "registration code to read::"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:271
+#: orig/tutorial02.txt:289
 #, no-wrap
 msgid ""
 "    class ChoiceInline(admin.StackedInline):\n"
@@ -701,34 +731,33 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:278
+#: orig/tutorial02.txt:296
 #, no-wrap
 msgid ""
 "    class PollAdmin(admin.ModelAdmin):\n"
 "        fieldsets = [\n"
 "            (None,               {'fields': ['question']}),\n"
-"            ('Date information', {'fields': ['pub_date'], 'classes': "
-"['collapse']}),\n"
+"            ('Date information', {'fields': ['pub_date'], 'classes': ['collapse']}),\n"
 "        ]\n"
 "        inlines = [ChoiceInline]\n"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:283
+#: orig/tutorial02.txt:301
 msgid ""
 "This tells Django: \"Choice objects are edited on the Poll admin page. By "
 "default, provide enough fields for 3 choices.\""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:285
+#: orig/tutorial02.txt:303
 msgid ""
 "Load the \"Add poll\" page to see how that looks, you may need to restart "
 "your development server:"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:288
+#: orig/tutorial02.txt:306
 #, no-wrap
 msgid ""
 ".. image:: _images/admin11t.png\n"
@@ -736,7 +765,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:292
+#: orig/tutorial02.txt:310
 msgid ""
 "It works like this: There are three slots for related Choices -- as "
 "specified by ``extra`` -- and each time you come back to the \"Change\" page "
@@ -744,7 +773,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:297
+#: orig/tutorial02.txt:315
 msgid ""
 "One small problem, though. It takes a lot of screen space to display all the "
 "fields for entering related Choice objects. For that reason, Django offers a "
@@ -753,7 +782,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:300
+#: orig/tutorial02.txt:318
 #, no-wrap
 msgid ""
 "    class ChoiceInline(admin.TabularInline):\n"
@@ -761,14 +790,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:303
+#: orig/tutorial02.txt:321
 msgid ""
 "With that ``TabularInline`` (instead of ``StackedInline``), the related "
 "objects are displayed in a more compact, table-based format:"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:306
+#: orig/tutorial02.txt:324
 #, no-wrap
 msgid ""
 ".. image:: _images/admin12.png\n"
@@ -776,7 +805,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:308
+#: orig/tutorial02.txt:326
 #, no-wrap
 msgid ""
 "Customize the admin change list\n"
@@ -784,19 +813,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:312
+#: orig/tutorial02.txt:330
 msgid ""
 "Now that the Poll admin page is looking good, let's make some tweaks to the "
 "\"change list\" page -- the one that displays all the polls in the system."
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:314
+#: orig/tutorial02.txt:332
 msgid "Here's what it looks like at this point:"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:322
+#: orig/tutorial02.txt:340
 msgid ""
 "By default, Django displays the ``str()`` of each object. But sometimes it'd "
 "be more helpful if we could display individual fields. To do that, use the "
@@ -805,7 +834,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:326
+#: orig/tutorial02.txt:344
 #, no-wrap
 msgid ""
 "    class PollAdmin(admin.ModelAdmin):\n"
@@ -814,28 +843,28 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:329
+#: orig/tutorial02.txt:347
 msgid ""
-"Just for good measure, let's also include the ``was_published_today`` custom "
-"method from Tutorial 1::"
+"Just for good measure, let's also include the ``was_published_recently`` "
+"custom method from Tutorial 1::"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:333
+#: orig/tutorial02.txt:351
 #, no-wrap
 msgid ""
 "    class PollAdmin(admin.ModelAdmin):\n"
 "        # ...\n"
-"        list_display = ('question', 'pub_date', 'was_published_today')\n"
+"        list_display = ('question', 'pub_date', 'was_published_recently')\n"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:335
+#: orig/tutorial02.txt:353
 msgid "Now the poll change list page looks like this:"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:338
+#: orig/tutorial02.txt:356
 #, no-wrap
 msgid ""
 ".. image:: _images/admin13t.png\n"
@@ -843,47 +872,58 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:345
+#: orig/tutorial02.txt:363
 msgid ""
 "You can click on the column headers to sort by those values -- except in the "
-"case of the ``was_published_today`` header, because sorting by the output of "
-"an arbitrary method is not supported. Also note that the column header for "
-"``was_published_today`` is, by default, the name of the method (with "
-"underscores replaced with spaces). But you can change that by giving that "
-"method (in ``models.py``) a ``short_description`` attribute::"
+"case of the ``was_published_recently`` header, because sorting by the output "
+"of an arbitrary method is not supported. Also note that the column header "
+"for ``was_published_recently`` is, by default, the name of the method (with "
+"underscores replaced with spaces), and that each line contains the string "
+"representation of the output."
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:349
+#: orig/tutorial02.txt:366
+msgid ""
+"You can improve that by giving that method (in ``models.py``) a few "
+"attributes, as follows::"
+msgstr ""
+
+#. type: Plain text
+#: orig/tutorial02.txt:374
 #, no-wrap
 msgid ""
-"    def was_published_today(self):\n"
-"        return self.pub_date.date() == datetime.date.today()\n"
-"    was_published_today.short_description = 'Published today?'\n"
+"    class Poll(models.Model):\n"
+"        # ...\n"
+"        def was_published_recently(self):\n"
+"            return self.pub_date >= timezone.now() - datetime.timedelta(days=1)\n"
+"        was_published_recently.admin_order_field = 'pub_date'\n"
+"        was_published_recently.boolean = True\n"
+"        was_published_recently.short_description = 'Published recently?'\n"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:352
+#: orig/tutorial02.txt:377
 msgid ""
 "Edit your admin.py file again and add an improvement to the Poll change list "
 "page: Filters. Add the following line to ``PollAdmin``::"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:354
+#: orig/tutorial02.txt:379
 #, no-wrap
 msgid "    list_filter = ['pub_date']\n"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:357
+#: orig/tutorial02.txt:382
 msgid ""
 "That adds a \"Filter\" sidebar that lets people filter the change list by "
 "the ``pub_date`` field:"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:360
+#: orig/tutorial02.txt:385
 #, no-wrap
 msgid ""
 ".. image:: _images/admin14t.png\n"
@@ -891,27 +931,27 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:365
+#: orig/tutorial02.txt:390
 msgid ""
 "The type of filter displayed depends on the type of field you're filtering "
-"on.  Because ``pub_date`` is a DateTimeField, Django knows to give the "
-"default filter options for DateTimeFields: \"Any date,\" \"Today,\" \"Past 7 "
-"days,\" \"This month,\" \"This year.\""
+"on.  Because ``pub_date`` is a :class:`~django.db.models.fields."
+"DateTimeField`, Django knows to give appropriate filter options: \"Any date,"
+"\" \"Today,\" \"Past 7 days,\" \"This month,\" \"This year.\""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:367
+#: orig/tutorial02.txt:392
 msgid "This is shaping up well. Let's add some search capability::"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:369
+#: orig/tutorial02.txt:394
 #, no-wrap
 msgid "    search_fields = ['question']\n"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:374
+#: orig/tutorial02.txt:399
 msgid ""
 "That adds a search box at the top of the change list. When somebody enters "
 "search terms, Django will search the ``question`` field. You can use as many "
@@ -920,20 +960,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:377
+#: orig/tutorial02.txt:402
 msgid ""
 "Finally, because Poll objects have dates, it'd be convenient to be able to "
 "drill down by date. Add this line::"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:379
+#: orig/tutorial02.txt:404
 #, no-wrap
 msgid "    date_hierarchy = 'pub_date'\n"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:383
+#: orig/tutorial02.txt:408
 msgid ""
 "That adds hierarchical navigation, by date, to the top of the change list "
 "page.  At top level, it displays all available years. Then it drills down to "
@@ -941,16 +981,16 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:388
+#: orig/tutorial02.txt:413
 msgid ""
-"Now's also a good time to note that change lists give you free "
-"pagination. The default is to display 50 items per page. Change-list "
-"pagination, search boxes, filters, date-hierarchies and "
-"column-header-ordering all work together like you think they should."
+"Now's also a good time to note that change lists give you free pagination. "
+"The default is to display 100 items per page. Change-list pagination, search "
+"boxes, filters, date-hierarchies and column-header-ordering all work "
+"together like you think they should."
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:390
+#: orig/tutorial02.txt:415
 #, no-wrap
 msgid ""
 "Customize the admin look and feel\n"
@@ -958,14 +998,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:394
+#: orig/tutorial02.txt:419
 msgid ""
 "Clearly, having \"Django administration\" at the top of each admin page is "
 "ridiculous. It's just placeholder text."
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:398
+#: orig/tutorial02.txt:423
 msgid ""
 "That's easy to change, though, using Django's template system. The Django "
 "admin is powered by Django itself, and its interfaces use Django's own "
@@ -973,57 +1013,55 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:403
+#: orig/tutorial02.txt:428
 msgid ""
-"Open your settings file (``mysite/settings.py``, remember) and look at the "
-":setting:`TEMPLATE_DIRS` setting. :setting:`TEMPLATE_DIRS` is a tuple of "
+"Open your settings file (``mysite/settings.py``, remember) and look at the :"
+"setting:`TEMPLATE_DIRS` setting. :setting:`TEMPLATE_DIRS` is a tuple of "
 "filesystem directories to check when loading Django templates. It's a search "
 "path."
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:406
+#: orig/tutorial02.txt:431
 msgid ""
 "By default, :setting:`TEMPLATE_DIRS` is empty. So, let's add a line to it, "
 "to tell Django where our templates live::"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:410
+#: orig/tutorial02.txt:435
 #, no-wrap
 msgid ""
 "    TEMPLATE_DIRS = (\n"
-"        '/home/my_username/mytemplates', # Change this to your own "
-"directory.\n"
+"        '/home/my_username/mytemplates', # Change this to your own directory.\n"
 "    )\n"
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:419
+#: orig/tutorial02.txt:444
 msgid ""
 "Now copy the template ``admin/base_site.html`` from within the default "
 "Django admin template directory in the source code of Django itself "
 "(``django/contrib/admin/templates``) into an ``admin`` subdirectory of "
 "whichever directory you're using in :setting:`TEMPLATE_DIRS`. For example, "
-"if your :setting:`TEMPLATE_DIRS` includes "
-"``'/home/my_username/mytemplates'``, as above, then copy "
-"``django/contrib/admin/templates/admin/base_site.html`` to "
-"``/home/my_username/mytemplates/admin/base_site.html``. Don't forget that "
-"``admin`` subdirectory."
+"if your :setting:`TEMPLATE_DIRS` includes ``'/home/my_username/"
+"mytemplates'``, as above, then copy ``django/contrib/admin/templates/admin/"
+"base_site.html`` to ``/home/my_username/mytemplates/admin/base_site.html``. "
+"Don't forget that ``admin`` subdirectory."
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:422
+#: orig/tutorial02.txt:447
 msgid ""
 "Then, just edit the file and replace the generic Django text with your own "
 "site's name as you see fit."
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:429
+#: orig/tutorial02.txt:454
 msgid ""
-"This template file contains lots of text like ``{% block branding %}`` and "
-"``{{ title }}``. The ``{%`` and ``{{`` tags are part of Django's template "
+"This template file contains lots of text like ``{% block branding %}`` and ``"
+"{{ title }}``. The ``{%`` and ``{{`` tags are part of Django's template "
 "language. When Django renders ``admin/base_site.html``, this template "
 "language will be evaluated to produce the final HTML page.  Don't worry if "
 "you can't make any sense of the template right now -- we'll delve into "
@@ -1031,7 +1069,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:434
+#: orig/tutorial02.txt:459
 msgid ""
 "Note that any of Django's default admin templates can be overridden. To "
 "override a template, just do the same thing you did with ``base_site.html`` "
@@ -1040,18 +1078,17 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:440
+#: orig/tutorial02.txt:465
 msgid ""
 "Astute readers will ask: But if :setting:`TEMPLATE_DIRS` was empty by "
 "default, how was Django finding the default admin templates? The answer is "
 "that, by default, Django automatically looks for a ``templates/`` "
-"subdirectory within each app package, for use as a fallback. See the "
-":ref:`template loader documentation <template-loaders>` for full "
-"information."
+"subdirectory within each app package, for use as a fallback. See the :ref:"
+"`template loader documentation <template-loaders>` for full information."
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:442
+#: orig/tutorial02.txt:467
 #, no-wrap
 msgid ""
 "Customize the admin index page\n"
@@ -1059,14 +1096,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:446
+#: orig/tutorial02.txt:471
 msgid ""
 "On a similar note, you might want to customize the look and feel of the "
 "Django admin index page."
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:451
+#: orig/tutorial02.txt:476
 msgid ""
 "By default, it displays all the apps in :setting:`INSTALLED_APPS` that have "
 "been registered with the admin application, in alphabetical order. You may "
@@ -1075,7 +1112,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:460
+#: orig/tutorial02.txt:485
 msgid ""
 "The template to customize is ``admin/index.html``. (Do the same as with "
 "``admin/base_site.html`` in the previous section -- copy it from the default "
@@ -1088,7 +1125,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/tutorial02.txt:462
+#: orig/tutorial02.txt:487
 msgid ""
 "When you're comfortable with the admin site, read :doc:`part 3 of this "
 "tutorial </intro/tutorial03>` to start working on public poll views."

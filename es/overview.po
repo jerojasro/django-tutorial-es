@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-03-21 13:09-0500\n"
+"POT-Creation-Date: 2012-03-26 23:21-0500\n"
 "PO-Revision-Date: 2012-03-21 21:43-0500\n"
 "Last-Translator: Igor Támara <igor@tamarapatino.org>\n"
 "Language-Team: slec's translation team\n"
@@ -56,8 +56,8 @@ msgstr ""
 "El objetivo de este documento es ofrecerle las especificidades técnicas "
 "necesarias para entender cómo funciona Django, no es un tutorial o una "
 "referencia -- que de hecho tenemos ambas! Cuando esté listo para iniciar un "
-"proyecto puede :doc:`comenzar con el tutorial </intro/tutorial01>` o "
-":doc:`sumergirse en documentación más detallada </topics/index>`."
+"proyecto puede :doc:`comenzar con el tutorial </intro/tutorial01>` o :doc:"
+"`sumergirse en documentación más detallada </topics/index>`."
 
 #. type: Plain text
 #: orig/overview.txt:16
@@ -72,9 +72,8 @@ msgstr ""
 #. type: Plain text
 #: orig/overview.txt:21
 msgid ""
-"Although you can use Django without a database, it comes with an "
-"object-relational mapper in which you describe your database layout in "
-"Python code."
+"Although you can use Django without a database, it comes with an object-"
+"relational mapper in which you describe your database layout in Python code."
 msgstr ""
 "Aunque puede usar Django sin una base de datos, viene con un mapeo objeto-"
 "relacional en el cual puede describir la estructura de la base de datos en "
@@ -91,8 +90,8 @@ msgstr ""
 "La :doc:`sintaxis del modelo de datos </topics/db/models>` ofrece variadas "
 "formas enriquecidas para represenar sus modelos -- hasta ahora ha resuelto "
 "dos años de problemas relacionados con esquema de base de datos. A "
-"continuación un ejemplo rápido, que puede almacenarse en el fichero "
-"``mysite/news/models.py``::"
+"continuación un ejemplo rápido, que puede almacenarse en el fichero ``mysite/"
+"news/models.py``::"
 
 #. type: Plain text
 #: orig/overview.txt:29
@@ -192,9 +191,9 @@ msgstr ""
 #. type: Plain text
 #: orig/overview.txt:60
 msgid ""
-"With that, you've got a free, and rich, :doc:`Python API "
-"</topics/db/queries>` to access your data. The API is created on the fly, no "
-"code generation necessary::"
+"With that, you've got a free, and rich, :doc:`Python API </topics/db/"
+"queries>` to access your data. The API is created on the fly, no code "
+"generation necessary::"
 msgstr ""
 "Con esto tiene un :doc:`Python API </topics/db/queries>` rico y de forma "
 "gratuita para acceder a su información.  El API se crea instantáneamente, no "
@@ -236,12 +235,10 @@ msgstr ""
 #: orig/overview.txt:73
 #, no-wrap
 msgid ""
-"    # Save the object into the database. You have to call save() "
-"explicitly.\n"
+"    # Save the object into the database. You have to call save() explicitly.\n"
 "    >>> r.save()\n"
 msgstr ""
-"    # Se almacena el objeto en la base de datos. Tiene que invocar save() "
-"explícitamente.\n"
+"    # Se almacena el objeto en la base de datos. Tiene que invocar save() explícitamente.\n"
 "    >>> r.save()\n"
 
 #. type: Plain text
@@ -345,8 +342,7 @@ msgid ""
 "    >>> r.full_name\n"
 "    'John Smith'\n"
 msgstr ""
-"    # Los objetos Article obtienen una API para acceder a los objetos "
-"Reporter relacionados.\n"
+"    # Los objetos Article obtienen una API para acceder a los objetos Reporter relacionados.\n"
 "    >>> r = a.reporter\n"
 "    >>> r.full_name\n"
 "    'John Smith'\n"
@@ -359,8 +355,7 @@ msgid ""
 "    >>> r.article_set.all()\n"
 "    [<Article: Django is cool>]\n"
 msgstr ""
-"    # Y vice versa: los objetos Reporter obtienen una API para acceder a los "
-"objetos Article.\n"
+"    # Y vice versa: los objetos Reporter obtienen una API para acceder a los objetos Article.\n"
 "    >>> r.article_set.all()\n"
 "    [<Article: Django is cool>]\n"
 
@@ -368,18 +363,15 @@ msgstr ""
 #: orig/overview.txt:122
 #, no-wrap
 msgid ""
-"    # The API follows relationships as far as you need, performing "
-"efficient\n"
+"    # The API follows relationships as far as you need, performing efficient\n"
 "    # JOINs for you behind the scenes.\n"
-"    # This finds all articles by a reporter whose name starts with "
-"\"John\".\n"
+"    # This finds all articles by a reporter whose name starts with \"John\".\n"
 "    >>> Article.objects.filter(reporter__full_name__startswith=\"John\")\n"
 "    [<Article: Django is cool>]\n"
 msgstr ""
 "    # La API sigue las relaciones tan profundo como lo requiera, ejecutando\n"
 "    # JOINs eficientes tras bambalinas.\n"
-"    # A continuación se encuentran todos los artículos de un reportero cuyo "
-"nombre comienza con \"John\".\n"
+"    # A continuación se encuentran todos los artículos de un reportero cuyo nombre comienza con \"John\".\n"
 "    >>> Article.objects.filter(reporter__full_name__startswith=\"John\")\n"
 "    [<Article: Django is cool>]\n"
 
@@ -391,8 +383,7 @@ msgid ""
 "    >>> r.full_name = 'Billy Goat'\n"
 "    >>> r.save()\n"
 msgstr ""
-"    # Se cambia un objeto modificando sus atributos e invocando el método "
-"save().\n"
+"    # Se cambia un objeto modificando sus atributos e invocando el método save().\n"
 "    >>> r.full_name = 'Billy Goat'\n"
 "    >>> r.save()\n"
 
@@ -410,8 +401,7 @@ msgstr ""
 #: orig/overview.txt:131
 #, no-wrap
 msgid ""
-"A dynamic admin interface: it's not just scaffolding -- it's the whole "
-"house\n"
+"A dynamic admin interface: it's not just scaffolding -- it's the whole house\n"
 "============================================================================\n"
 msgstr ""
 
@@ -419,10 +409,9 @@ msgstr ""
 #: orig/overview.txt:137
 msgid ""
 "Once your models are defined, Django can automatically create a "
-"professional, production ready :doc:`administrative interface "
-"</ref/contrib/admin/index>` -- a Web site that lets authenticated users add, "
-"change and delete objects. It's as easy as registering your model in the "
-"admin site::"
+"professional, production ready :doc:`administrative interface </ref/contrib/"
+"admin/index>` -- a Web site that lets authenticated users add, change and "
+"delete objects. It's as easy as registering your model in the admin site::"
 msgstr ""
 
 #. type: Plain text
@@ -509,7 +498,7 @@ msgstr ""
 #. type: Plain text
 #: orig/overview.txt:180
 #, no-wrap
-msgid "    from django.conf.urls.defaults import *\n"
+msgid "    from django.conf.urls import patterns, url, include\n"
 msgstr ""
 
 #. type: Plain text
@@ -519,8 +508,7 @@ msgid ""
 "    urlpatterns = patterns('',\n"
 "        (r'^articles/(\\d{4})/$', 'news.views.year_archive'),\n"
 "        (r'^articles/(\\d{4})/(\\d{2})/$', 'news.views.month_archive'),\n"
-"        (r'^articles/(\\d{4})/(\\d{2})/(\\d+)/$', "
-"'news.views.article_detail'),\n"
+"        (r'^articles/(\\d{4})/(\\d{2})/(\\d+)/$', 'news.views.article_detail'),\n"
 "    )\n"
 msgstr ""
 
@@ -563,10 +551,10 @@ msgstr ""
 #. type: Plain text
 #: orig/overview.txt:210
 msgid ""
-"Each view is responsible for doing one of two things: Returning an "
-":class:`~django.http.HttpResponse` object containing the content for the "
-"requested page, or raising an exception such as "
-":class:`~django.http.Http404`.  The rest is up to you."
+"Each view is responsible for doing one of two things: Returning an :class:"
+"`~django.http.HttpResponse` object containing the content for the requested "
+"page, or raising an exception such as :class:`~django.http.Http404`.  The "
+"rest is up to you."
 msgstr ""
 
 #. type: Plain text
@@ -583,16 +571,15 @@ msgstr ""
 msgid ""
 "    def year_archive(request, year):\n"
 "        a_list = Article.objects.filter(pub_date__year=year)\n"
-"        return render_to_response('news/year_archive.html', {'year': year, "
-"'article_list': a_list})\n"
+"        return render_to_response('news/year_archive.html', {'year': year, 'article_list': a_list})\n"
 msgstr ""
 
 #. type: Plain text
 #: orig/overview.txt:222
 msgid ""
 "This example uses Django's :doc:`template system </topics/templates>`, which "
-"has several powerful features but strives to stay simple enough for "
-"non-programmers to use."
+"has several powerful features but strives to stay simple enough for non-"
+"programmers to use."
 msgstr ""
 
 #. type: Plain text
@@ -620,7 +607,7 @@ msgstr ""
 #. type: Plain text
 #: orig/overview.txt:235
 msgid ""
-"Let's say the ``news/article_detail.html`` template was found. Here's what "
+"Let's say the ``news/year_archive.html`` template was found. Here's what "
 "that might look like:"
 msgstr ""
 
@@ -673,9 +660,9 @@ msgstr ""
 #. type: Plain text
 #: orig/overview.txt:262
 msgid ""
-"Note ``{{ article.pub_date|date:\"F j, Y\" }}`` uses a Unix-style \"pipe\" "
-"(the \"|\" character). This is called a template filter, and it's a way to "
-"filter the value of a variable. In this case, the date filter formats a "
+"Note ``{{ article.pub_date|date:\"F j, Y\" }}`` uses a Unix-style \"pipe"
+"\" (the \"|\" character). This is called a template filter, and it's a way "
+"to filter the value of a variable. In this case, the date filter formats a "
 "Python datetime object in the given format (as found in PHP's date function; "
 "yes, there is one good idea in PHP)."
 msgstr ""
@@ -740,10 +727,10 @@ msgstr ""
 #: orig/overview.txt:303
 msgid ""
 "Note that you don't have to use Django's template system if you prefer "
-"another system. While Django's template system is particularly "
-"well-integrated with Django's model layer, nothing forces you to use it. For "
-"that matter, you don't have to use Django's database API, either. You can "
-"use another database abstraction layer, you can read XML files, you can read "
+"another system. While Django's template system is particularly well-"
+"integrated with Django's model layer, nothing forces you to use it. For that "
+"matter, you don't have to use Django's database API, either. You can use "
+"another database abstraction layer, you can read XML files, you can read "
 "files off disk, or anything you want. Each piece of Django -- models, views, "
 "templates -- is decoupled from the next."
 msgstr ""
@@ -763,21 +750,21 @@ msgid ""
 "useful features:"
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/overview.txt:312
 msgid ""
 "A :doc:`caching framework </topics/cache>` that integrates with memcached or "
 "other backends."
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/overview.txt:315
 msgid ""
 "A :doc:`syndication framework </ref/contrib/syndication>` that makes "
 "creating RSS and Atom feeds as easy as writing a small Python class."
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/overview.txt:318
 msgid ""
 "More sexy automatically-generated admin features -- this overview barely "
@@ -795,6 +782,6 @@ msgstr ""
 #. type: Plain text
 #: orig/overview.txt:324
 msgid ""
-".. _download Django: http://www.djangoproject.com/download/ .. _the "
-"community: http://www.djangoproject.com/community/"
+".. _download Django: https://www.djangoproject.com/download/ .. _the "
+"community: https://www.djangoproject.com/community/"
 msgstr ""

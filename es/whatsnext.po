@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-03-21 13:09-0500\n"
+"POT-Creation-Date: 2012-03-26 23:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,8 +48,8 @@ msgstr ""
 #: orig/whatsnext.txt:15
 msgid ""
 "Well, we've always been big fans of learning by doing. At this point you "
-"should know enough to start a project of your own and start fooling "
-"around. As you need to learn new tricks, come back to the documentation."
+"should know enough to start a project of your own and start fooling around. "
+"As you need to learn new tricks, come back to the documentation."
 msgstr ""
 
 #. type: Plain text
@@ -80,8 +80,8 @@ msgstr ""
 #: orig/whatsnext.txt:29
 msgid ""
 "Django's got a *lot* of documentation -- almost 200,000 words -- so finding "
-"what you need can sometimes be tricky. A few good places to start are the "
-":ref:`search` and the :ref:`genindex`."
+"what you need can sometimes be tricky. A few good places to start are the :"
+"ref:`search` and the :ref:`genindex`."
 msgstr ""
 
 #. type: Plain text
@@ -104,7 +104,7 @@ msgid ""
 "different needs:"
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/whatsnext.txt:42
 msgid ""
 "The :doc:`introductory material </intro/index>` is designed for people new "
@@ -113,47 +113,43 @@ msgid ""
 "\"feels\"."
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/whatsnext.txt:48
 msgid ""
 "The :doc:`topic guides </topics/index>`, on the other hand, dive deep into "
-"individual parts of Django. There are complete guides to Django's "
-":doc:`model system </topics/db/index>`, :doc:`template engine "
-"</topics/templates>`, :doc:`forms framework </topics/forms/index>`, and much "
-"more."
+"individual parts of Django. There are complete guides to Django's :doc:"
+"`model system </topics/db/index>`, :doc:`template engine </topics/"
+"templates>`, :doc:`forms framework </topics/forms/index>`, and much more."
 msgstr ""
 
 #. type: Plain text
 #: orig/whatsnext.txt:52
 #, no-wrap
 msgid ""
-"      This is probably where you'll want to spend most of your time; if you "
-"work\n"
-"      your way through these guides you should come out knowing pretty "
-"much\n"
-"      everything there is to know about Django.\n"
+"  This is probably where you'll want to spend most of your time; if you work\n"
+"  your way through these guides you should come out knowing pretty much\n"
+"  everything there is to know about Django.\n"
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/whatsnext.txt:58
 msgid ""
 "Web development is often broad, not deep -- problems span many domains.  "
 "We've written a set of :doc:`how-to guides </howto/index>` that answer "
-"common \"How do I ...?\" questions. Here you'll find information about "
-":doc:`generating PDFs with Django </howto/outputting-pdf>`, :doc:`writing "
-"custom template tags </howto/custom-template-tags>`, and more."
+"common \"How do I ...?\" questions. Here you'll find information about :doc:"
+"`generating PDFs with Django </howto/outputting-pdf>`, :doc:`writing custom "
+"template tags </howto/custom-template-tags>`, and more."
 msgstr ""
 
 #. type: Plain text
 #: orig/whatsnext.txt:61
 #, no-wrap
 msgid ""
-"      Answers to really common questions can also be found in the "
-":doc:`FAQ\n"
-"      </faq/index>`.\n"
+"  Answers to really common questions can also be found in the :doc:`FAQ\n"
+"  </faq/index>`.\n"
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/whatsnext.txt:68
 msgid ""
 "The guides and how-to's don't cover every single class, function, and method "
@@ -163,15 +159,15 @@ msgid ""
 "turn to find the details of a particular function or whathaveyou."
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/whatsnext.txt:75
 msgid ""
 "Finally, there's some \"specialized\" documentation not usually relevant to "
-"most developers. This includes the :doc:`release notes </releases/index>`, "
-":doc:`documentation of obsolete features </obsolete/index>`, :doc:`internals "
+"most developers. This includes the :doc:`release notes </releases/index>`, :"
+"doc:`documentation of obsolete features </obsolete/index>`, :doc:`internals "
 "documentation </internals/index>` for those who want to add code to Django "
-"itself, and a :doc:`few other things that simply don't fit elsewhere "
-"</misc/index>`."
+"itself, and a :doc:`few other things that simply don't fit elsewhere </misc/"
+"index>`."
 msgstr ""
 
 #. type: Plain text
@@ -190,26 +186,26 @@ msgid ""
 "several reasons:"
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/whatsnext.txt:85
 msgid "To make content fixes, such as grammar/typo corrections."
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/whatsnext.txt:88
 msgid ""
 "To add information and/or examples to existing sections that need to be "
 "expanded."
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/whatsnext.txt:91
 msgid ""
 "To document Django features that aren't yet documented. (The list of such "
 "features is shrinking but exists nonetheless.)"
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/whatsnext.txt:94
 msgid ""
 "To add documentation for new features as new features get added, or as "
@@ -227,8 +223,8 @@ msgstr ""
 #. type: Plain text
 #: orig/whatsnext.txt:100
 msgid ""
-".. _django/trunk/docs: "
-"http://code.djangoproject.com/browser/django/trunk/docs"
+".. _django/trunk/docs: https://code.djangoproject.com/browser/django/trunk/"
+"docs"
 msgstr ""
 
 #. type: Plain text
@@ -257,13 +253,13 @@ msgstr ""
 #. type: Plain text
 #: orig/whatsnext.txt:117
 msgid ""
-"The most recent version of the Django documentation lives at "
-"http://docs.djangoproject.com/en/dev/. These HTML pages are generated "
-"automatically from the text files in source control. That means they reflect "
-"the \"latest and greatest\" in Django -- they include the very latest "
-"corrections and additions, and they discuss the latest Django features, "
-"which may only be available to users of the Django development version. (See "
-"\"Differences between versions\" below.)"
+"The most recent version of the Django documentation lives at http://docs."
+"djangoproject.com/en/dev/. These HTML pages are generated automatically from "
+"the text files in source control. That means they reflect the \"latest and "
+"greatest\" in Django -- they include the very latest corrections and "
+"additions, and they discuss the latest Django features, which may only be "
+"available to users of the Django development version. (See \"Differences "
+"between versions\" below.)"
 msgstr ""
 
 #. type: Plain text
@@ -287,10 +283,9 @@ msgstr ""
 #. type: Plain text
 #: orig/whatsnext.txt:130
 msgid ""
-".. _ticket system: "
-"http://code.djangoproject.com/simpleticket?component=Documentation "
-".. _django-users mailing list: http://groups.google.com/group/django-users "
-".. _#django IRC channel: irc://irc.freenode.net/django"
+".. _ticket system: https://code.djangoproject.com/simpleticket?"
+"component=Documentation .. _django-users mailing list: http://groups.google."
+"com/group/django-users .. _#django IRC channel: irc://irc.freenode.net/django"
 msgstr ""
 
 #. type: Plain text
@@ -319,10 +314,10 @@ msgstr ""
 #. type: Plain text
 #: orig/whatsnext.txt:145
 msgid ""
-"If you're using the development version of Django (aka the Subversion "
-"\"trunk\"), note that the ``docs/`` directory contains all of the "
-"documentation. You can ``svn update`` it, just as you ``svn update`` the "
-"Python code, in order to get the latest changes."
+"If you're using the development version of Django (aka the Subversion \"trunk"
+"\"), note that the ``docs/`` directory contains all of the documentation. "
+"You can ``svn update`` it, just as you ``svn update`` the Python code, in "
+"order to get the latest changes."
 msgstr ""
 
 #. type: Plain text
@@ -340,9 +335,7 @@ msgstr ""
 #. type: Plain text
 #: orig/whatsnext.txt:152
 #, no-wrap
-msgid ""
-"    $ svn co http://code.djangoproject.com/svn/django/trunk/docs/ "
-"django_docs\n"
+msgid "    $ svn co https://code.djangoproject.com/svn/django/trunk/docs/ django_docs\n"
 msgstr ""
 
 #. type: Plain text
@@ -375,74 +368,91 @@ msgid ""
 "steps:"
 msgstr ""
 
-#. type: Bullet: '    * '
-#: orig/whatsnext.txt:171
+#. type: Bullet: '* '
+#: orig/whatsnext.txt:170
 msgid ""
 "Django's documentation uses a system called Sphinx__ to convert from plain "
 "text to HTML. You'll need to install Sphinx by either downloading and "
-"installing the package from the Sphinx Web site, or by Python's "
-"``easy_install``:"
+"installing the package from the Sphinx Web site, or with ``pip``:"
 msgstr ""
 
 #. type: Plain text
-#: orig/whatsnext.txt:173 orig/whatsnext.txt:180
+#: orig/whatsnext.txt:172 orig/whatsnext.txt:179
 #, no-wrap
-msgid "      .. code-block:: bash\n"
+msgid "  .. code-block:: bash\n"
 msgstr ""
 
 #. type: Plain text
-#: orig/whatsnext.txt:175
+#: orig/whatsnext.txt:174
 #, no-wrap
-msgid "            $ easy_install Sphinx\n"
+msgid "        $ sudo pip install Sphinx\n"
 msgstr ""
 
-#. type: Bullet: '    * '
-#: orig/whatsnext.txt:178
+#. type: Bullet: '* '
+#: orig/whatsnext.txt:177
 msgid ""
-"Then, just use the included ``Makefile`` to turn the documentation into "
-"HTML:"
+"Then, just use the included ``Makefile`` to turn the documentation into HTML:"
 msgstr ""
 
 #. type: Plain text
-#: orig/whatsnext.txt:183
+#: orig/whatsnext.txt:182
 #, no-wrap
 msgid ""
-"            $ cd path/to/django/docs\n"
-"            $ make html\n"
+"        $ cd path/to/django/docs\n"
+"        $ make html\n"
 msgstr ""
 
 #. type: Plain text
-#: orig/whatsnext.txt:185
+#: orig/whatsnext.txt:184
 #, no-wrap
-msgid "      You'll need `GNU Make`__ installed for this.\n"
+msgid "  You'll need `GNU Make`__ installed for this.\n"
 msgstr ""
 
-#. type: Bullet: '    * '
-#: orig/whatsnext.txt:187
+#. type: Plain text
+#: orig/whatsnext.txt:186
+#, no-wrap
+msgid "  If you're on Windows you can alternatively use the included batch file:\n"
+msgstr ""
+
+#. type: Plain text
+#: orig/whatsnext.txt:188
+#, no-wrap
+msgid "  .. code-block:: bat\n"
+msgstr ""
+
+#. type: Plain text
+#: orig/whatsnext.txt:191
+#, no-wrap
+msgid ""
+"        cd path\\to\\django\\docs\n"
+"        make.bat html\n"
+msgstr ""
+
+#. type: Bullet: '* '
+#: orig/whatsnext.txt:193
 msgid "The HTML documentation will be placed in ``docs/_build/html``."
 msgstr ""
 
 #. type: Plain text
-#: orig/whatsnext.txt:189
+#: orig/whatsnext.txt:195
 msgid ".. note::"
 msgstr ""
 
 #. type: Plain text
-#: orig/whatsnext.txt:192
+#: orig/whatsnext.txt:198
 #, no-wrap
 msgid ""
-"    Generation of the Django documentation will work with Sphinx version "
-"0.6\n"
+"    Generation of the Django documentation will work with Sphinx version 0.6\n"
 "    or newer, but we recommend going straight to Sphinx 1.0.2 or newer.\n"
 msgstr ""
 
 #. type: Plain text
-#: orig/whatsnext.txt:195
+#: orig/whatsnext.txt:201
 msgid "__ http://sphinx.pocoo.org/ __ http://www.gnu.org/software/make/"
 msgstr ""
 
 #. type: Plain text
-#: orig/whatsnext.txt:197
+#: orig/whatsnext.txt:203
 #, no-wrap
 msgid ""
 "Differences between versions\n"
@@ -450,7 +460,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/whatsnext.txt:205
+#: orig/whatsnext.txt:211
 msgid ""
 "As previously mentioned, the text documentation in our Subversion repository "
 "contains the \"latest and greatest\" changes and additions. These changes "
@@ -461,12 +471,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: orig/whatsnext.txt:207
+#: orig/whatsnext.txt:213
 msgid "We follow this policy:"
 msgstr ""
 
-#. type: Bullet: '    * '
-#: orig/whatsnext.txt:212
+#. type: Bullet: '* '
+#: orig/whatsnext.txt:218
 msgid ""
 "The primary documentation on djangoproject.com is an HTML version of the "
 "latest docs in Subversion. These docs always correspond to the latest "
@@ -474,23 +484,23 @@ msgid ""
 "framework *since* the latest release."
 msgstr ""
 
-#. type: Bullet: '    * '
-#: orig/whatsnext.txt:215
+#. type: Bullet: '* '
+#: orig/whatsnext.txt:221
 msgid ""
 "As we add features to Django's development version, we try to update the "
 "documentation in the same Subversion commit transaction."
 msgstr ""
 
-#. type: Bullet: '    * '
-#: orig/whatsnext.txt:219
+#. type: Bullet: '* '
+#: orig/whatsnext.txt:225
 msgid ""
 "To distinguish feature changes/additions in the docs, we use the phrase: "
 "\"New in version X.Y\", being X.Y the next release version (hence, the one "
 "being developed)."
 msgstr ""
 
-#. type: Bullet: '    * '
-#: orig/whatsnext.txt:227
+#. type: Bullet: '* '
+#: orig/whatsnext.txt:233
 msgid ""
 "Documentation for a particular Django release is frozen once the version has "
 "been released officially. It remains a snapshot of the docs as of the moment "
@@ -501,14 +511,14 @@ msgid ""
 "current version of that document."
 msgstr ""
 
-#. type: Bullet: '    * '
-#: orig/whatsnext.txt:230
+#. type: Bullet: '* '
+#: orig/whatsnext.txt:236
 msgid ""
 "The `main documentation Web page`_ includes links to documentation for all "
 "previous versions."
 msgstr ""
 
 #. type: Plain text
-#: orig/whatsnext.txt:231
+#: orig/whatsnext.txt:237
 msgid ".. _main documentation Web page: http://docs.djangoproject.com/en/dev/"
 msgstr ""

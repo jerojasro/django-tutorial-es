@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-03-21 13:09-0500\n"
+"POT-Creation-Date: 2012-03-26 23:32-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,8 +33,8 @@ msgstr ""
 #. type: Plain text
 #: orig/tutorial04.txt:8
 msgid ""
-"This tutorial begins where :doc:`Tutorial 3 </intro/tutorial03>` left "
-"off. We're continuing the Web-poll application and will focus on simple form "
+"This tutorial begins where :doc:`Tutorial 3 </intro/tutorial03>` left off. "
+"We're continuing the Web-poll application and will focus on simple form "
 "processing and cutting down our code."
 msgstr ""
 
@@ -67,9 +67,7 @@ msgstr ""
 #. type: Plain text
 #: orig/tutorial04.txt:20
 #, no-wrap
-msgid ""
-"    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% "
-"endif %}\n"
+msgid "    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}\n"
 msgstr ""
 
 #. type: Plain text
@@ -79,10 +77,8 @@ msgid ""
 "    <form action=\"/polls/{{ poll.id }}/vote/\" method=\"post\">\n"
 "    {% csrf_token %}\n"
 "    {% for choice in poll.choice_set.all %}\n"
-"        <input type=\"radio\" name=\"choice\" id=\"choice{{ forloop.counter "
-"}}\" value=\"{{ choice.id }}\" />\n"
-"        <label for=\"choice{{ forloop.counter }}\">{{ choice.choice "
-"}}</label><br />\n"
+"        <input type=\"radio\" name=\"choice\" id=\"choice{{ forloop.counter }}\" value=\"{{ choice.id }}\" />\n"
+"        <label for=\"choice{{ forloop.counter }}\">{{ choice.choice }}</label><br />\n"
 "    {% endfor %}\n"
 "    <input type=\"submit\" value=\"Vote\" />\n"
 "    </form>\n"
@@ -93,7 +89,7 @@ msgstr ""
 msgid "A quick rundown:"
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/tutorial04.txt:37
 msgid ""
 "The above template displays a radio button for each poll choice. The "
@@ -103,41 +99,42 @@ msgid ""
 "data ``choice=3``. This is HTML Forms 101."
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/tutorial04.txt:44
 msgid ""
 "We set the form's ``action`` to ``/polls/{{ poll.id }}/vote/``, and we set "
-"``method=\"post\"``. Using ``method=\"post\"`` (as opposed to "
-"``method=\"get\"``) is very important, because the act of submitting this "
-"form will alter data server-side. Whenever you create a form that alters "
-"data server-side, use ``method=\"post\"``. This tip isn't specific to "
-"Django; it's just good Web development practice."
+"``method=\"post\"``. Using ``method=\"post\"`` (as opposed to ``method=\"get"
+"\"``) is very important, because the act of submitting this form will alter "
+"data server-side. Whenever you create a form that alters data server-side, "
+"use ``method=\"post\"``. This tip isn't specific to Django; it's just good "
+"Web development practice."
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/tutorial04.txt:47
 msgid ""
 "``forloop.counter`` indicates how many times the :ttag:`for` tag has gone "
 "through its loop"
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/tutorial04.txt:54
 msgid ""
 "Since we're creating a POST form (which can have the effect of modifying "
 "data), we need to worry about Cross Site Request Forgeries.  Thankfully, you "
 "don't have to worry too hard, because Django comes with a very easy-to-use "
 "system for protecting against it. In short, all POST forms that are targeted "
-"at internal URLs should use the ``{% csrf_token %}`` template tag."
+"at internal URLs should use the :ttag:`{% csrf_token %}<csrf_token>` "
+"template tag."
 msgstr ""
 
 #. type: Plain text
 #: orig/tutorial04.txt:59
 msgid ""
-"The ``{% csrf_token %}`` tag requires information from the request object, "
-"which is not normally accessible from within the template context. To fix "
-"this, a small adjustment needs to be made to the ``detail`` view, so that it "
-"looks like the following::"
+"The :ttag:`{% csrf_token %}<csrf_token>` tag requires information from the "
+"request object, which is not normally accessible from within the template "
+"context. To fix this, a small adjustment needs to be made to the ``detail`` "
+"view, so that it looks like the following::"
 msgstr ""
 
 #. type: Plain text
@@ -149,15 +146,14 @@ msgid ""
 "    def detail(request, poll_id):\n"
 "        p = get_object_or_404(Poll, pk=poll_id)\n"
 "        return render_to_response('polls/detail.html', {'poll': p},\n"
-"                                   "
-"context_instance=RequestContext(request))\n"
+"                                   context_instance=RequestContext(request))\n"
 msgstr ""
 
 #. type: Plain text
 #: orig/tutorial04.txt:69
 msgid ""
-"The details of how this works are explained in the documentation for "
-":ref:`RequestContext <subclassing-context-requestcontext>`."
+"The details of how this works are explained in the documentation for :ref:"
+"`RequestContext <subclassing-context-requestcontext>`."
 msgstr ""
 
 #. type: Plain text
@@ -204,21 +200,19 @@ msgid ""
 "        else:\n"
 "            selected_choice.votes += 1\n"
 "            selected_choice.save()\n"
-"            # Always return an HttpResponseRedirect after successfully "
-"dealing\n"
-"            # with POST data. This prevents data from being posted twice if "
-"a\n"
+"            # Always return an HttpResponseRedirect after successfully dealing\n"
+"            # with POST data. This prevents data from being posted twice if a\n"
 "            # user hits the Back button.\n"
-"            return HttpResponseRedirect(reverse('polls.views.results', "
-"args=(p.id,)))\n"
+"            return HttpResponseRedirect(reverse('polls.views.results', args=(p.id,)))\n"
 msgstr ""
 
 #. type: Plain text
 #: orig/tutorial04.txt:104
-msgid "This code includes a few things we haven't covered yet in this tutorial:"
+msgid ""
+"This code includes a few things we haven't covered yet in this tutorial:"
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/tutorial04.txt:110
 msgid ""
 ":attr:`request.POST <django.http.HttpRequest.POST>` is a dictionary-like "
@@ -232,16 +226,14 @@ msgstr ""
 #: orig/tutorial04.txt:116
 #, no-wrap
 msgid ""
-"      Note that Django also provides :attr:`request.GET\n"
-"      <django.http.HttpRequest.GET>` for accessing GET data in the same way "
-"--\n"
-"      but we're explicitly using :attr:`request.POST\n"
-"      <django.http.HttpRequest.POST>` in our code, to ensure that data is "
-"only\n"
-"      altered via a POST call.\n"
+"  Note that Django also provides :attr:`request.GET\n"
+"  <django.http.HttpRequest.GET>` for accessing GET data in the same way --\n"
+"  but we're explicitly using :attr:`request.POST\n"
+"  <django.http.HttpRequest.POST>` in our code, to ensure that data is only\n"
+"  altered via a POST call.\n"
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/tutorial04.txt:120
 msgid ""
 "``request.POST['choice']`` will raise :exc:`KeyError` if ``choice`` wasn't "
@@ -249,64 +241,59 @@ msgid ""
 "redisplays the poll form with an error message if ``choice`` isn't given."
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/tutorial04.txt:127
 msgid ""
-"After incrementing the choice count, the code returns an "
-":class:`~django.http.HttpResponseRedirect` rather than a normal "
-":class:`~django.http.HttpResponse`.  "
-":class:`~django.http.HttpResponseRedirect` takes a single argument: the URL "
-"to which the user will be redirected (see the following point for how we "
-"construct the URL in this case)."
+"After incrementing the choice count, the code returns an :class:`~django."
+"http.HttpResponseRedirect` rather than a normal :class:`~django.http."
+"HttpResponse`.  :class:`~django.http.HttpResponseRedirect` takes a single "
+"argument: the URL to which the user will be redirected (see the following "
+"point for how we construct the URL in this case)."
 msgstr ""
 
 #. type: Plain text
 #: orig/tutorial04.txt:132
 #, no-wrap
 msgid ""
-"      As the Python comment above points out, you should always return an\n"
-"      :class:`~django.http.HttpResponseRedirect` after successfully dealing "
-"with\n"
-"      POST data. This tip isn't specific to Django; it's just good Web\n"
-"      development practice.\n"
+"  As the Python comment above points out, you should always return an\n"
+"  :class:`~django.http.HttpResponseRedirect` after successfully dealing with\n"
+"  POST data. This tip isn't specific to Django; it's just good Web\n"
+"  development practice.\n"
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/tutorial04.txt:141
 msgid ""
-"We are using the :func:`~django.core.urlresolvers.reverse` function in the "
-":class:`~django.http.HttpResponseRedirect` constructor in this example.  "
-"This function helps avoid having to hardcode a URL in the view function.  It "
-"is given the name of the view that we want to pass control to and the "
-"variable portion of the URL pattern that points to that view. In this case, "
-"using the URLconf we set up in Tutorial 3, this "
-":func:`~django.core.urlresolvers.reverse` call will return a string like ::"
+"We are using the :func:`~django.core.urlresolvers.reverse` function in the :"
+"class:`~django.http.HttpResponseRedirect` constructor in this example.  This "
+"function helps avoid having to hardcode a URL in the view function.  It is "
+"given the name of the view that we want to pass control to and the variable "
+"portion of the URL pattern that points to that view. In this case, using the "
+"URLconf we set up in Tutorial 3, this :func:`~django.core.urlresolvers."
+"reverse` call will return a string like ::"
 msgstr ""
 
 #. type: Plain text
 #: orig/tutorial04.txt:143
 #, no-wrap
-msgid "        '/polls/3/results/'\n"
+msgid "    '/polls/3/results/'\n"
 msgstr ""
 
 #. type: Plain text
 #: orig/tutorial04.txt:147
 #, no-wrap
 msgid ""
-"      ... where the ``3`` is the value of ``p.id``. This redirected URL "
-"will\n"
-"      then call the ``'results'`` view to display the final page. Note that "
-"you\n"
-"      need to use the full name of the view here (including the prefix).\n"
+"  ... where the ``3`` is the value of ``p.id``. This redirected URL will\n"
+"  then call the ``'results'`` view to display the final page. Note that you\n"
+"  need to use the full name of the view here (including the prefix).\n"
 msgstr ""
 
 #. type: Plain text
 #: orig/tutorial04.txt:151
 msgid ""
-"As mentioned in Tutorial 3, ``request`` is a "
-":class:`~django.http.HttpRequest` object. For more on "
-":class:`~django.http.HttpRequest` objects, see the :doc:`request and "
-"response documentation </ref/request-response>`."
+"As mentioned in Tutorial 3, ``request`` is a :class:`~django.http."
+"HttpRequest` object. For more on :class:`~django.http.HttpRequest` objects, "
+"see the :doc:`request and response documentation </ref/request-response>`."
 msgstr ""
 
 #. type: Plain text
@@ -344,8 +331,7 @@ msgstr ""
 msgid ""
 "    <ul>\n"
 "    {% for choice in poll.choice_set.all %}\n"
-"        <li>{{ choice.choice }} -- {{ choice.votes }} vote{{ "
-"choice.votes|pluralize }}</li>\n"
+"        <li>{{ choice.choice }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>\n"
 "    {% endfor %}\n"
 "    </ul>\n"
 msgstr ""
@@ -375,10 +361,10 @@ msgstr ""
 #. type: Plain text
 #: orig/tutorial04.txt:187
 msgid ""
-"The ``detail()`` (from :doc:`Tutorial 3 </intro/tutorial03>`) and "
-"``results()`` views are stupidly simple -- and, as mentioned above, "
-"redundant. The ``index()`` view (also from Tutorial 3), which displays a "
-"list of polls, is similar."
+"The ``detail()`` (from :doc:`Tutorial 3 </intro/tutorial03>`) and ``results()"
+"`` views are stupidly simple -- and, as mentioned above, redundant. The "
+"``index()`` view (also from Tutorial 3), which displays a list of polls, is "
+"similar."
 msgstr ""
 
 #. type: Plain text
@@ -405,17 +391,17 @@ msgid ""
 "conversion. We will:"
 msgstr ""
 
-#. type: Bullet: '    1. '
+#. type: Bullet: '1. '
 #: orig/tutorial04.txt:201
 msgid "Convert the URLconf."
 msgstr ""
 
-#. type: Bullet: '    2. '
+#. type: Bullet: '2. '
 #: orig/tutorial04.txt:203
 msgid "Delete some of the old, unneeded views."
 msgstr ""
 
-#. type: Bullet: '    3. '
+#. type: Bullet: '3. '
 #: orig/tutorial04.txt:205
 msgid "Fix up URL handling for the new views."
 msgstr ""
@@ -434,13 +420,10 @@ msgstr ""
 #: orig/tutorial04.txt:215
 #, no-wrap
 msgid ""
-"    Generally, when writing a Django app, you'll evaluate whether generic "
-"views\n"
-"    are a good fit for your problem, and you'll use them from the "
-"beginning,\n"
+"    Generally, when writing a Django app, you'll evaluate whether generic views\n"
+"    are a good fit for your problem, and you'll use them from the beginning,\n"
 "    rather than refactoring your code halfway through. But this tutorial\n"
-"    intentionally has focused on writing the views \"the hard way\" until "
-"now, to\n"
+"    intentionally has focused on writing the views \"the hard way\" until now, to\n"
 "    focus on core concepts.\n"
 msgstr ""
 
@@ -460,7 +443,7 @@ msgstr ""
 #. type: Plain text
 #: orig/tutorial04.txt:222
 #, no-wrap
-msgid "    from django.conf.urls.defaults import *\n"
+msgid "    from django.conf.urls import patterns, include, url\n"
 msgstr ""
 
 #. type: Plain text
@@ -468,10 +451,10 @@ msgstr ""
 #, no-wrap
 msgid ""
 "    urlpatterns = patterns('polls.views',\n"
-"        (r'^$', 'index'),\n"
-"        (r'^(?P<poll_id>\\d+)/$', 'detail'),\n"
-"        (r'^(?P<poll_id>\\d+)/results/$', 'results'),\n"
-"        (r'^(?P<poll_id>\\d+)/vote/$', 'vote'),\n"
+"        url(r'^$', 'index'),\n"
+"        url(r'^(?P<poll_id>\\d+)/$', 'detail'),\n"
+"        url(r'^(?P<poll_id>\\d+)/results/$', 'results'),\n"
+"        url(r'^(?P<poll_id>\\d+)/vote/$', 'vote'),\n"
 "    )\n"
 msgstr ""
 
@@ -484,7 +467,7 @@ msgstr ""
 #: orig/tutorial04.txt:235
 #, no-wrap
 msgid ""
-"    from django.conf.urls.defaults import *\n"
+"    from django.conf.urls import patterns, include, url\n"
 "    from django.views.generic import DetailView, ListView\n"
 "    from polls.models import Poll\n"
 msgstr ""
@@ -494,12 +477,12 @@ msgstr ""
 #, no-wrap
 msgid ""
 "    urlpatterns = patterns('',\n"
-"        (r'^$',\n"
+"        url(r'^$',\n"
 "            ListView.as_view(\n"
 "                queryset=Poll.objects.order_by('-pub_date')[:5],\n"
 "                context_object_name='latest_poll_list',\n"
 "                template_name='polls/index.html')),\n"
-"        (r'^(?P<pk>\\d+)/$',\n"
+"        url(r'^(?P<pk>\\d+)/$',\n"
 "            DetailView.as_view(\n"
 "                model=Poll,\n"
 "                template_name='polls/detail.html')),\n"
@@ -508,28 +491,27 @@ msgid ""
 "                model=Poll,\n"
 "                template_name='polls/results.html'),\n"
 "            name='poll_results'),\n"
-"        (r'^(?P<poll_id>\\d+)/vote/$', 'polls.views.vote'),\n"
+"        url(r'^(?P<poll_id>\\d+)/vote/$', 'polls.views.vote'),\n"
 "    )\n"
 msgstr ""
 
 #. type: Plain text
 #: orig/tutorial04.txt:259
 msgid ""
-"We're using two generic views here: "
-":class:`~django.views.generic.list.ListView` and "
-":class:`~django.views.generic.detail.DetailView`. Respectively, those two "
-"views abstract the concepts of \"display a list of objects\" and \"display a "
-"detail page for a particular type of object.\""
+"We're using two generic views here: :class:`~django.views.generic.list."
+"ListView` and :class:`~django.views.generic.detail.DetailView`. "
+"Respectively, those two views abstract the concepts of \"display a list of "
+"objects\" and \"display a detail page for a particular type of object.\""
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/tutorial04.txt:262
 msgid ""
 "Each generic view needs to know what model it will be acting upon. This is "
 "provided using the ``model`` parameter."
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/tutorial04.txt:267
 msgid ""
 "The :class:`~django.views.generic.list.DetailView` generic view expects the "
@@ -537,16 +519,15 @@ msgid ""
 "changed ``poll_id`` to ``pk`` for the generic views."
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/tutorial04.txt:276
 msgid ""
 "We've added a name, ``poll_results``, to the results view so that we have a "
 "way to refer to its URL later on (see the documentation about :ref:`naming "
-"URL patterns <naming-url-patterns>` for information). We're also using the "
-":func:`~django.conf.urls.default.url` function from "
-":mod:`django.conf.urls.defaults` here. It's a good habit to use "
-":func:`~django.conf.urls.defaults.url` when you are providing a pattern name "
-"like this."
+"URL patterns <naming-url-patterns>` for information). We're also using the :"
+"func:`~django.conf.urls.url` function from :mod:`django.conf.urls` here. "
+"It's a good habit to use :func:`~django.conf.urls.url` when you are "
+"providing a pattern name like this."
 msgstr ""
 
 #. type: Plain text
@@ -599,13 +580,12 @@ msgstr ""
 #: orig/tutorial04.txt:317
 msgid ""
 "The last thing to do is fix the URL handling to account for the use of "
-"generic views. In the vote view above, we used the "
-":func:`~django.core.urlresolvers.reverse` function to avoid hard-coding our "
-"URLs. Now that we've switched to a generic view, we'll need to change the "
-":func:`~django.core.urlresolvers.reverse` call to point back to our new "
-"generic view. We can't simply use the view function anymore -- generic views "
-"can be (and are) used multiple times -- but we can use the name we've "
-"given::"
+"generic views. In the vote view above, we used the :func:`~django.core."
+"urlresolvers.reverse` function to avoid hard-coding our URLs. Now that we've "
+"switched to a generic view, we'll need to change the :func:`~django.core."
+"urlresolvers.reverse` call to point back to our new generic view. We can't "
+"simply use the view function anymore -- generic views can be (and are) used "
+"multiple times -- but we can use the name we've given::"
 msgstr ""
 
 #. type: Plain text
@@ -641,32 +621,32 @@ msgid ""
 "tutorial will cover:"
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/tutorial04.txt:337
 msgid "Advanced form processing"
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/tutorial04.txt:337
 msgid "Using the RSS framework"
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/tutorial04.txt:337
 msgid "Using the cache framework"
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/tutorial04.txt:337
 msgid "Using the comments framework"
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/tutorial04.txt:337
 msgid "Advanced admin features: Permissions"
 msgstr ""
 
-#. type: Bullet: '    * '
+#. type: Bullet: '* '
 #: orig/tutorial04.txt:337
 msgid "Advanced admin features: Custom JavaScript"
 msgstr ""
