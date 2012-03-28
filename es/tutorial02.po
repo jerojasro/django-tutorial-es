@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2012-03-26 23:31-0500\n"
-"PO-Revision-Date: 2012-03-22 20:10-0500\n"
+"PO-Revision-Date: 2012-03-28 10:37-0500\n"
 "Last-Translator: root <juanf.jaramillo@opdevel.com>\n"
 "Language-Team: slec's translation team\n"
 "Language: es\n"
@@ -28,7 +28,9 @@ msgstr "=====================================\n"
 msgid ""
 "Writing your first Django app, part 2\n"
 "=====================================\n"
-msgstr "Escribir su primera aplicación de Django, parte 2"
+msgstr ""
+"Escribir su primera aplicación de Django, parte 2\n"
+"=================================================\n"
 
 #. type: Plain text
 #: orig/tutorial02.txt:8
@@ -53,7 +55,11 @@ msgid ""
 "    Generating admin sites for your staff or clients to add, change and delete\n"
 "    content is tedious work that doesn't require much creativity. For that\n"
 "    reason, Django entirely automates creation of admin interfaces for models.\n"
-msgstr "    Generar sitios administrativos para su equipo o clientes para adicionar, cambiar y borrar contenido es un trabajo tedioso que no requiere creatividad. Por tal razón, Django automatiza totalmente la creación de interfaces de administración para los modelos."
+msgstr ""
+"    Generar sitios administrativos para su equipo o clientes para adicionar, "
+"cambiar y borrar contenido es un trabajo tedioso que no requiere "
+"creatividad. Por tal razón, Django automatiza totalmente la creación de "
+"interfaces de administración para los modelos."
 
 #. type: Plain text
 #: orig/tutorial02.txt:20
@@ -68,14 +74,16 @@ msgstr "    Django fue escrito en un ambiente de una sala de prensa, con una muy
 
 #. type: Plain text
 #: orig/tutorial02.txt:23
-#, fuzzy, no-wrap
+#, no-wrap
 #| msgid ""
 #| "    The admin isn't necessarily intended to be used by site visitors; it's for\n"
 #| "    site managers.\n"
 msgid ""
 "    The admin isn't intended to be used by site visitors. It's for site\n"
 "    managers.\n"
-msgstr "    El administrador no es necesariamente utilizado por los que visitan el sitio; este es para el administrador del sitio."
+msgstr ""
+"    El objetivo del administrador no es para ser usado por visitantes. Es "
+"para administrar el sitio."
 
 #. type: Plain text
 #: orig/tutorial02.txt:25
@@ -97,7 +105,6 @@ msgstr ""
 
 #. type: Bullet: '* '
 #: orig/tutorial02.txt:31
-#, fuzzy
 #| msgid ""
 #| "Add ``\"django.contrib.admin\"`` to your :setting:`INSTALLED_APPS` "
 #| "setting."
@@ -105,8 +112,8 @@ msgid ""
 "Uncomment ``\"django.contrib.admin\"`` in the :setting:`INSTALLED_APPS` "
 "setting."
 msgstr ""
-"Adicione ``\"django.contrib.admin\"`` a su configuración :setting:"
-"`INSTALLED_APPS`."
+"Des comente ``\"django.contrib.admin\"`` en :setting:`INSTALLED_APPS` "
+"configuración."
 
 #. type: Bullet: '* '
 #: orig/tutorial02.txt:34
@@ -181,13 +188,17 @@ msgid ""
 "          **url(r'^admin/', include(admin.site.urls)),**\n"
 "      )\n"
 msgstr ""
+"          # Des comente la siguiente línea para habilitar el administrativo:\n"
+"          **url(r'^admin/', include(admin.site.urls)),**\n"
+"      )"
 
 #. type: Plain text
 #: orig/tutorial02.txt:62
-#, fuzzy, no-wrap
+#, no-wrap
 #| msgid "      (The bold lines are the ones that needed to be uncommented.)\n"
 msgid "  (The bold lines are the ones that needed to be uncommented.)\n"
-msgstr "      (Las líneas resaltadas son las que se necesita que no estén comentadas.)"
+msgstr ""
+"  (Las líneas resaltadas son las que se necesita que no estén comentadas.)"
 
 #. type: Plain text
 #: orig/tutorial02.txt:64
@@ -301,7 +312,6 @@ msgstr ""
 
 #. type: Plain text
 #: orig/tutorial02.txt:106
-#, fuzzy
 #| msgid ""
 #| "You should see a few other types of editable content, including groups, "
 #| "users and sites. These are core features Django ships with by default."
@@ -309,7 +319,7 @@ msgid ""
 "You should see a few types of editable content, including groups, users and "
 "sites. These are core features Django ships with by default."
 msgstr ""
-"Deberá ver algunos otros tipos de edición de contenido, incluyendo grupos, "
+"Deberá ver algunos tipos de edición de contenido, incluyendo grupos, "
 "usuarios y sitios. Este es el núcleo de los rasgos de Django por defecto."
 
 #. type: Plain text
