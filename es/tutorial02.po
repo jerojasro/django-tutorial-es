@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2012-03-26 23:31-0500\n"
-"PO-Revision-Date: 2012-03-28 10:57-0500\n"
+"PO-Revision-Date: 2012-03-28 11:00-0500\n"
 "Last-Translator: root <juanf.jaramillo@opdevel.com>\n"
 "Language-Team: slec's translation team\n"
 "Language: es\n"
@@ -419,6 +419,8 @@ msgid ""
 "Explore the free admin functionality\n"
 "====================================\n"
 msgstr ""
+"Explorar la funcionalidad libre del administrativo\n"
+"==================================================\n"
 
 #. type: Plain text
 #: orig/tutorial02.txt:130
