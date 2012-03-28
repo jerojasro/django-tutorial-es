@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2012-03-26 23:31-0500\n"
-"PO-Revision-Date: 2012-03-28 10:37-0500\n"
+"PO-Revision-Date: 2012-03-28 10:57-0500\n"
 "Last-Translator: root <juanf.jaramillo@opdevel.com>\n"
 "Language-Team: slec's translation team\n"
 "Language: es\n"
@@ -56,10 +56,10 @@ msgid ""
 "    content is tedious work that doesn't require much creativity. For that\n"
 "    reason, Django entirely automates creation of admin interfaces for models.\n"
 msgstr ""
-"    Generar sitios administrativos para su equipo o clientes para adicionar, "
-"cambiar y borrar contenido es un trabajo tedioso que no requiere "
-"creatividad. Por tal razón, Django automatiza totalmente la creación de "
-"interfaces de administración para los modelos."
+"    Generar sitios administrativos para su equipo o clientes para adicionar,\n"
+"    cambiar y borrar contenido es un trabajo tedioso que no requiere\n"
+"    creatividad. Por tal razón, Django automatiza totalmente la creación de\n"
+"    interfaces de administración para los modelos.\n"
 
 #. type: Plain text
 #: orig/tutorial02.txt:20
@@ -70,7 +70,16 @@ msgid ""
 "    system to add news stories, events, sports scores, etc., and that content is\n"
 "    displayed on the public site. Django solves the problem of creating a\n"
 "    unified interface for site administrators to edit content.\n"
-msgstr "    Django fue escrito en un ambiente de una sala de prensa, con una muy clara separación entre \"contenido editorial\" y el sitio \"publico\". Los administradores del sito usan el sistema para adicionar nuevos relatos, eventos, resultados deportivos, etc., y el contenido es mostrado en el sitio público. Django resuelve el problema de crear una interface unificada para que el administrador del sitio edite el contenido."
+msgstr ""
+"    Django fue escrito en un ambiente de una sala de prensa, con una muy "
+"clara\n"
+"    separación entre \"contenido editorial\" y el sitio \"publico\". Los\n"
+"    administradores del sito usan el sistema para adicionar nuevos relatos,\n"
+"    eventos, resultados deportivos, etc., y el contenido es mostrado en el "
+"sitio\n"
+"    público. Django resuelve el problema de crear una interface unificada "
+"para\n"
+"    que el administrador del sitio edite el contenido.\n"
 
 #. type: Plain text
 #: orig/tutorial02.txt:23
@@ -83,7 +92,8 @@ msgid ""
 "    managers.\n"
 msgstr ""
 "    El objetivo del administrador no es para ser usado por visitantes. Es "
-"para administrar el sitio."
+"para\n"
+"    administrar el sitio.\n"
 
 #. type: Plain text
 #: orig/tutorial02.txt:25
@@ -91,7 +101,9 @@ msgstr ""
 msgid ""
 "Activate the admin site\n"
 "=======================\n"
-msgstr "Activar el sitio administrativo"
+msgstr ""
+"Activar el sitio administrativo\n"
+"===============================\n"
 
 #. type: Plain text
 #: orig/tutorial02.txt:29
@@ -161,6 +173,10 @@ msgid ""
 "      **from django.contrib import admin**\n"
 "      **admin.autodiscover()**\n"
 msgstr ""
+"      # Des-comente las siguientes dos líneas para habilitar el "
+"administrativo:\n"
+"      **from django.contrib import admin**\n"
+"      **admin.autodiscover()**\n"
 
 #. type: Plain text
 #: orig/tutorial02.txt:53
@@ -171,6 +187,11 @@ msgid ""
 "          # url(r'^$', '{{ project_name }}.views.home', name='home'),\n"
 "          # url(r'^{{ project_name }}/', include('{{ project_name }}.foo.urls')),\n"
 msgstr ""
+"      urlpatterns = patterns('',\n"
+"          # Ejemplos:\n"
+"          # url(r'^$', '{{ project_name }}.views.home', name='home'),\n"
+"          # url(r'^{{ project_name }}/', include('{{ project_name "
+"}}.foo.urls')),\n"
 
 #. type: Plain text
 #: orig/tutorial02.txt:56
@@ -179,6 +200,10 @@ msgid ""
 "          # Uncomment the admin/doc line below to enable admin documentation:\n"
 "          # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),\n"
 msgstr ""
+"          # Des comente la línea del adminsitrativo/document abajo para "
+"habilitar\n"
+"          # la documentación del administrativo:\n"
+"          # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),\n"
 
 #. type: Plain text
 #: orig/tutorial02.txt:60
@@ -197,8 +222,7 @@ msgstr ""
 #, no-wrap
 #| msgid "      (The bold lines are the ones that needed to be uncommented.)\n"
 msgid "  (The bold lines are the ones that needed to be uncommented.)\n"
-msgstr ""
-"  (Las líneas resaltadas son las que se necesita que no estén comentadas.)"
+msgstr "  (Las líneas resaltadas son las que se necesita que no estén comentadas.)\n"
 
 #. type: Plain text
 #: orig/tutorial02.txt:64
@@ -206,7 +230,9 @@ msgstr ""
 msgid ""
 "Start the development server\n"
 "============================\n"
-msgstr "Comenzar el servidor de desarrollo"
+msgstr ""
+"Comenzar el servidor de desarrollo\n"
+"==================================\n"
 
 #. type: Plain text
 #: orig/tutorial02.txt:67
@@ -262,6 +288,8 @@ msgid ""
 "    If at this point, instead of the above login page, you get an error\n"
 "    page reporting something like::\n"
 msgstr ""
+"    Si en este punto, en lugar de la página de login, obtiene una de error\n"
+"    que reporta algo como::\n"
 
 #. type: Plain text
 #: orig/tutorial02.txt:88
@@ -280,6 +308,11 @@ msgid ""
 "    tutorial version. You'll want to either switch to the older tutorial or the\n"
 "    newer Django version.\n"
 msgstr ""
+"    entonces probablemente este usando una versión de Django que no "
+"corresponde\n"
+"    a la del tutorial. Entonces puede hacer una de dos, o cambiar a una "
+"versión\n"
+"    más antigua o a una de Django más nueva.\n"
 
 #. type: Plain text
 #: orig/tutorial02.txt:94
@@ -287,7 +320,9 @@ msgstr ""
 msgid ""
 "Enter the admin site\n"
 "====================\n"
-msgstr "Ingresar al sitio administratovo"
+msgstr ""
+"Ingresar al sitio administrativo\n"
+"================================\n"
 
 #. type: Plain text
 #: orig/tutorial02.txt:100
@@ -328,7 +363,9 @@ msgstr ""
 msgid ""
 "Make the poll app modifiable in the admin\n"
 "=========================================\n"
-msgstr "Hacer la aplicación de sondeo modificable en el admi"
+msgstr ""
+"Hacer la aplicación de sondeo modificable en el administrativo\n"
+"==============================================================\n"
 
 #. type: Plain text
 #: orig/tutorial02.txt:111
