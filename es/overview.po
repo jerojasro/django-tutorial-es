@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2012-03-26 23:21-0500\n"
-"PO-Revision-Date: 2012-03-27 21:36-0500\n"
+"PO-Revision-Date: 2012-03-31 11:41-0500\n"
 "Last-Translator: Igor Támara <igor@tamarapatino.org>\n"
 "Language-Team: slec's translation team\n"
 "Language: es\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: orig/overview.txt:1
 #, no-wrap
 msgid "==================\n"
-msgstr "==================="
+msgstr "===================\n"
 
 #. type: Plain text
 #: orig/overview.txt:3
