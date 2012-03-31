@@ -258,10 +258,11 @@ msgstr ""
 "algún sitio que se encuentre en la ruta de su sistema, como por ejemplo :"
 "file:`/usr/local/bin`."
 
+# TODO ver si toca traducir "admonition" o no
 #. type: Plain text
 #: orig/tutorial01.txt:79
 msgid ".. admonition:: Where should this code live?"
-msgstr ""
+msgstr ".. admonition:: ¿Dónde debería ubicar el código?"
 
 #. type: Plain text
 #: orig/tutorial01.txt:86
@@ -274,6 +275,12 @@ msgid ""
 "    that people may be able to view your code over the Web. That's not good for\n"
 "    security.\n"
 msgstr ""
+"    Si tiene experiencia previa con PHP, seguramente estará acostumbrado a poner\n"
+"    el código fuente en la carpeta raíz (document root) del servidor Web (en un\n"
+"    lugar como ``/var/www``).  Con Django no se hace eso. No es recomendable\n"
+"    poner el código Python dentro de la carpeta raíz del servidor, porque al\n"
+"    hacerlo se expone a que alguien vea el código desde Internet. Es algo malo\n"
+"    desde el punto de vista de seguridad.\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:89
@@ -282,11 +289,13 @@ msgid ""
 "    Put your code in some directory **outside** of the document root, such as\n"
 "    :file:`/home/mycode`.\n"
 msgstr ""
+"    Ubique el código **fuera** de la carpeta raíz del servidor, por ejemplo en\n"
+"    :file:`/home/mycode`.\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:91
 msgid "Let's look at what :djadmin:`startproject` created::"
-msgstr ""
+msgstr "Demos una mirada a lo que creó :djadmin:`startproject`::"
 
 #. type: Plain text
 #: orig/tutorial01.txt:99
@@ -300,11 +309,18 @@ msgid ""
 "            urls.py\n"
 "            wsgi.py\n"
 msgstr ""
+"    mysite/\n"
+"        manage.py\n"
+"        mysite/\n"
+"            __init__.py\n"
+"            settings.py\n"
+"            urls.py\n"
+"            wsgi.py\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:101
 msgid ".. admonition:: Doesn't match what you see?"
-msgstr ""
+msgstr ".. admonition:: ¿No corresponde con lo que ve?"
 
 #. type: Plain text
 #: orig/tutorial01.txt:106
@@ -315,11 +331,16 @@ msgid ""
 "    a version of Django that doesn't match this tutorial version.  You'll\n"
 "    want to either switch to the older tutorial or the newer Django version.\n"
 msgstr ""
+"    La estructura estándar de los proyectos cambió recientemente. Si ud. ve una\n"
+"    estructura «plana» (sin el directorio :file:`mysite/`), seguramente está\n"
+"    usando una versión de Django que no corresponde con la versión que usa este\n"
+"    tutorial.  Se sugiere que siga el tutorial de la versión correspondiente, o\n"
+"    que use la versión de Django correspondiente.\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:108
 msgid "These files are:"
-msgstr ""
+msgstr "Estos archivos son:"
 
 #. type: Bullet: '* '
 #: orig/tutorial01.txt:112
@@ -327,6 +348,9 @@ msgid ""
 "The outer :file:`mysite/` directory is just a container for your project. "
 "Its name doesn't matter to Django; you can rename it to anything you like."
 msgstr ""
+"El directorio :file:`mysite/` es simplemente un contenedor para su proyecto.  El "
+"nombre de dicho directorio no afecta a Django de ninguna manera; puede nombrarlo "
+"como ud. desee."
 
 #. type: Bullet: '* '
 #: orig/tutorial01.txt:116
@@ -335,6 +359,9 @@ msgid ""
 "Django project in various ways. You can read all the details about :file:"
 "`manage.py` in :doc:`/ref/django-admin`."
 msgstr ""
+":file:`manage.py`: Una utilidad de línea de órdenes que le permite "
+"interactuar de distintas formas con este proyecto Django.  Puede leer todos "
+"los detalles del uso de :file: `manage.py` en :doc:`/ref/django-admin`."
 
 #. type: Bullet: '* '
 #: orig/tutorial01.txt:120
@@ -343,6 +370,9 @@ msgid ""
 "project. Its name is the Python package name you'll need to use to import "
 "anything inside it (e.g. ``import mysite.settings``)."
 msgstr ""
+"El directorio interno :file:`mysite/` es el paquete Python de su proyecto. Su "
+"nombre es el nombre del paquete Python que tendrá que usar para importar "
+"cualquier elemento del proyecto (por ejemplo,, ``import mysite.settings``)."
 
 #. type: Bullet: '* '
 #: orig/tutorial01.txt:124
@@ -351,6 +381,10 @@ msgid ""
 "directory should be considered a Python package. (Read `more about "
 "packages`_ in the official Python docs if you're a Python beginner.)"
 msgstr ""
+":file:`mysite/__init__.py`: un archivo vacío que le indica a Python que este "
+"directorio debe ser considerado un paquete Python (Lea `Más acerca de "
+"paquetes` en la documentación oficial de Python si usted es un principiante "
+"con Python.)"
 
 #. type: Bullet: '* '
 #: orig/tutorial01.txt:128
@@ -358,6 +392,9 @@ msgid ""
 ":file:`mysite/settings.py`: Settings/configuration for this Django "
 "project.  :doc:`/topics/settings` will tell you all about how settings work."
 msgstr ""
+":file:`mysite/settings.py`: configuración para este proyecto Django. En "
+":doc:`/topics/settings` encontrará todo lo relacionado con la configuración "
+"de Django."
 
 #. type: Bullet: '* '
 #: orig/tutorial01.txt:132
@@ -366,6 +403,9 @@ msgid ""
 "\"table of contents\" of your Django-powered site. You can read more about "
 "URLs in :doc:`/topics/http/urls`."
 msgstr ""
+":file:`mysite/urls.py`: las declaraciones de URL para este proyecto Django; "
+"son la «tabla de contenido» de su sitio Django.  Más información acerca de "
+"URLs en :doc:`/topics/http/urls`."
 
 #. type: Bullet: '* '
 #: orig/tutorial01.txt:135
@@ -373,13 +413,19 @@ msgid ""
 ":file:`mysite/wsgi.py`: An entry-point for WSGI-compatible webservers to "
 "serve your project. See :doc:`/howto/deployment/wsgi/index` for more details."
 msgstr ""
+":file:`mysite/wsgi.py`: un punto de entrada para desplegar su proyecto con "
+"servidores web compatibles con WSGI.  Consulte "
+":doc:`/howto/deployment/wsgi/index` para más detalles."
 
+# TODO ver si hay que traducir
 #. type: Plain text
 #: orig/tutorial01.txt:137
 msgid ""
 ".. _more about packages: http://docs.python.org/tutorial/modules."
 "html#packages"
 msgstr ""
+".. _more about packages: http://docs.python.org/tutorial/modules."
+"html#packages"
 
 #. type: Plain text
 #: orig/tutorial01.txt:139
@@ -388,6 +434,8 @@ msgid ""
 "The development server\n"
 "----------------------\n"
 msgstr ""
+"El servidor de desarrollo\n"
+"-------------------------\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:144
@@ -396,6 +444,9 @@ msgid ""
 "you haven't already, and run the command ``python manage.py runserver``. "
 "You'll see the following output on the command line::"
 msgstr ""
+"Verifiquemos que esto funcionó apropiadamente. Entre al directorio "
+":file:`mysite`, si no lo ha hecho ya, y ejecute la orden ``python manage.py "
+"runserver``.  Verá lo siguiente en la línea de órdenes::"
 
 #. type: Plain text
 #: orig/tutorial01.txt:147
@@ -404,6 +455,8 @@ msgid ""
 "    Validating models...\n"
 "    0 errors found.\n"
 msgstr ""
+"    Validating models...\n"
+"    0 errors found.\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:151
@@ -413,6 +466,9 @@ msgid ""
 "    Development server is running at http://127.0.0.1:8000/\n"
 "    Quit the server with CONTROL-C.\n"
 msgstr ""
+"    Django version 1.4, using settings 'mysite.settings'\n"
+"    Development server is running at http://127.0.0.1:8000/\n"
+"    Quit the server with CONTROL-C.\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:156
@@ -422,6 +478,10 @@ msgid ""
 "things rapidly, without having to deal with configuring a production server "
 "-- such as Apache -- until you're ready for production."
 msgstr ""
+"Ha iniciado el servidor de desarrollo de Django, un servidor web ligero "
+"escrito completamente en Python. Lo hemos incluido en Django para que pueda "
+"desarrollar rápidamente, sin tener que configurar un servidor de producción "
+"-- como Apache -- hasta que esté listo para entrar a producción."
 
 #. type: Plain text
 #: orig/tutorial01.txt:160
@@ -430,6 +490,10 @@ msgid ""
 "production environment. It's intended only for use while developing. (We're "
 "in the business of making Web frameworks, not Web servers.)"
 msgstr ""
+"Es un buen momento para indicar: NO use este servidor en nada que se parezca "
+"a un ambiente de producción. Está pensado para usarse únicamente durante el "
+"desarrollo. (Estamos en el negocio de hacer frameworks Web, no servidores "
+"Web.)"
 
 #. type: Plain text
 #: orig/tutorial01.txt:164
@@ -438,11 +502,14 @@ msgid ""
 "browser. You'll see a \"Welcome to Django\" page, in pleasant, light-blue "
 "pastel.  It worked!"
 msgstr ""
+"Ahora que el servidor está ejecutándose, visite http://127.0.0.1:8000/ con su "
+"navegador web.  Verá una página con el mensaje «Welcome to Django» "
+"(Bienvenido a Django) en un agradable color azul pastel. ¡Funcionó!"
 
 #. type: Plain text
 #: orig/tutorial01.txt:166
 msgid ".. admonition:: Changing the port"
-msgstr ""
+msgstr ".. admonition:: Cambiar el puerto"
 
 #. type: Plain text
 #: orig/tutorial01.txt:169
@@ -451,6 +518,8 @@ msgid ""
 "    By default, the :djadmin:`runserver` command starts the development server\n"
 "    on the internal IP at port 8000.\n"
 msgstr ""
+"    La orden :djadmin:`runserver` inicia el servidor de desarrollo asociándolo a\n"
+"    la IP interna y al puerto 8000.\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:173
@@ -460,18 +529,21 @@ msgid ""
 "    it as a command-line argument. For instance, this command starts the server\n"
 "    on port 8080:\n"
 msgstr ""
+"    Si quiere cambiar el puerto en que escucha el servidor, páselo como\n"
+"    argumento a la orden. Por ejemplo, esta orden inicia el servidor en el\n"
+"    puerto 8080:\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:175 orig/tutorial01.txt:183
 #, no-wrap
 msgid "    .. code-block:: bash\n"
-msgstr ""
+msgstr "    .. code-block:: bash\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:177
 #, no-wrap
 msgid "        python manage.py runserver 8080\n"
-msgstr ""
+msgstr "        python manage.py runserver 8080\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:181
@@ -481,12 +553,15 @@ msgid ""
 "    listen on all public IPs (useful if you want to show off your work on other\n"
 "    computers), use:\n"
 msgstr ""
+"    Si desea cambiar la IP en la cual escucha el servidor, pásela junto con el\n"
+"    puerto. Por ejemplo, para escuchar en todas las IPs públicas (útil si quiere\n"
+"    hacer una demostración de su trabajo en otros computadores), use:\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:185
 #, no-wrap
 msgid "        python manage.py runserver 0.0.0.0:8000\n"
-msgstr ""
+msgstr "        python manage.py runserver 0.0.0.0:8000\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:188
@@ -495,6 +570,8 @@ msgid ""
 "    Full docs for the development server can be found in the\n"
 "    :djadmin:`runserver` reference.\n"
 msgstr ""
+"    Puede encontrar la documentación completa del servidor de desarrollo en la\n"
+"    referencia de :djadmin:`runserver`.\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:190
@@ -503,6 +580,8 @@ msgid ""
 "Database setup\n"
 "--------------\n"
 msgstr ""
+"Configuración de base de datos\n"
+"------------------------------\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:196
