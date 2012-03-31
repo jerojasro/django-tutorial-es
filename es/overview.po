@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2012-03-26 23:21-0500\n"
-"PO-Revision-Date: 2012-03-31 11:41-0500\n"
+"PO-Revision-Date: 2012-03-31 11:44-0500\n"
 "Last-Translator: Igor Támara <igor@tamarapatino.org>\n"
 "Language-Team: slec's translation team\n"
 "Language: es\n"
@@ -30,7 +30,7 @@ msgid ""
 "==================\n"
 msgstr ""
 "Un vistazo a Django\n"
-"==================="
+"===================\n"
 
 #. type: Plain text
 #: orig/overview.txt:8
@@ -67,7 +67,7 @@ msgid ""
 "=================\n"
 msgstr ""
 "Diseñe su modelo\n"
-"================"
+"================\n"
 
 #. type: Plain text
 #: orig/overview.txt:21
@@ -407,7 +407,7 @@ msgstr ""
 "Una interfaz de administración dinámica: No solamente el andamiaje -- es la "
 "casa entera\n"
 "============================================================================"
-"=============="
+"===========\n"
 
 #. type: Plain text
 #: orig/overview.txt:137
