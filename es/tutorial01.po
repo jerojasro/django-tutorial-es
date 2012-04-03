@@ -591,6 +591,10 @@ msgid ""
 "keys in the :setting:`DATABASES` ``'default'`` item to match your database "
 "connection settings."
 msgstr ""
+"Ahora, edite :file:`mysite/settings.py`. Es un módulo Python normal con "
+"variables de módulo representando las distintas opciones de Django. Cambie "
+"las siguientes entradas en :setting:`DATABASES` ``'default'`` por las "
+"necesarias para configurar la conexión a su base de datos."
 
 #. type: Bullet: '* '
 #: orig/tutorial01.txt:202
@@ -600,6 +604,10 @@ msgid ""
 "backends.sqlite3'`` or ``'django.db.backends.oracle'``. Other backends are :"
 "setting:`also available <DATABASE-ENGINE>`."
 msgstr ""
+":setting:`ENGINE <DATABASE-ENGINE>` -- Uno de ``'django.db.backends. "
+"postgresql_psycopg2'``, ``'django.db.backends.mysql'``, ``'django.db. "
+"backends.sqlite3'`` o ``'django.db.backends.oracle'``. También hay otros "
+"backends:setting:`disponibles <DATABASE-ENGINE>`."
 
 #. type: Bullet: '* '
 #: orig/tutorial01.txt:209
@@ -610,6 +618,12 @@ msgid ""
 "file doesn't exist, it will automatically be created when you synchronize "
 "the database for the first time (see below)."
 msgstr ""
+":setting:`NAME` -- El nombre de su base de datos. Si está usando SQLite, la "
+"base de datos será un fichero en su computador; en ese caso, :setting:`NAME` "
+"debe contener la ruta completa al fichero, incluyendo el nombre del mismo. Si "
+"el fichero no existe, se creará automáticamente al sincronizar la base de "
+"datos por primera vez (ver más adelante)."
+
 
 #. type: Plain text
 #: orig/tutorial01.txt:212
@@ -618,16 +632,21 @@ msgid ""
 "  When specifying the path, always use forward slashes, even on\n"
 "  Windows (e.g. ``C:/homes/user/mysite/sqlite3.db``).\n"
 msgstr ""
+"  Al indicar la ruta, use siempre barras, incluso en Windows (por ejemplo,\n"
+"  ``C:/homes/user/mysite/sqlite3.db``).\n"
 
 #. type: Bullet: '* '
 #: orig/tutorial01.txt:214
 msgid ":setting:`USER` -- Your database username (not used for SQLite)."
 msgstr ""
+":setting:`USER` -- Nombre de usuario de base de datos (no es necesario para SQLite)."
 
 #. type: Bullet: '* '
 #: orig/tutorial01.txt:217
 msgid ":setting:`PASSWORD` -- Your database password (not used for SQLite)."
 msgstr ""
+":setting:`PASSWORD` -- Contraseña de base de datos (no es necesario para "
+"SQLite)."
 
 #. type: Bullet: '* '
 #: orig/tutorial01.txt:221
@@ -636,6 +655,9 @@ msgid ""
 "string if your database server is on the same physical machine (not used for "
 "SQLite)."
 msgstr ""
+":setting:`HOST` -- La dirección del computador en que se encuentra la base de "
+"datos. Deje este campo vacío si el servidor de base de datos se encuentra en "
+"la misma máquina física (no es necesario para SQLite)."
 
 #. type: Plain text
 #: orig/tutorial01.txt:227
@@ -646,6 +668,12 @@ msgid ""
 "of Python 2.5 and later, so you won't need to install anything else to "
 "support your database."
 msgstr ""
+"Si las bases de datos son algo nuevo para usted, recomendamos usar SQLite, "
+"defina la opción setting:`ENGINE` con el valor "
+"``'django.db.backends.sqlite3'``, y :setting:`NAME` con la ruta en la que "
+"desea almacenar la base de datos. SQLite está incluido en Python 2.5 y "
+"versiones posteriores, así que no tendrá que instalar nada más para usar esta "
+"base de datos."
 
 #. type: Plain text
 #: orig/tutorial01.txt:233
@@ -655,6 +683,9 @@ msgid ""
 "    this point. Do that with \"``CREATE DATABASE database_name;``\" within your\n"
 "    database's interactive prompt.\n"
 msgstr ""
+"    Si usa PostgreSQL o MySQL, asegúrese de haber creado una base de datos en\n"
+"    este punto. Hágalo con la orden \"``CREATE DATABASE database_name;``\" desde\n"
+"    el intérprete de órdenes de su base de datos.\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:236
@@ -663,6 +694,8 @@ msgid ""
 "    If you're using SQLite, you don't need to create anything beforehand - the\n"
 "    database file will be created automatically when it is needed.\n"
 msgstr ""
+"    Si usa SQLite no necesita crear nada de antemano - la base de datos se\n"
+"    creará automáticamente cuando sea necesario.\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:239
@@ -670,6 +703,9 @@ msgid ""
 "While you're editing :file:`settings.py`, set :setting:`TIME_ZONE` to your "
 "time zone. The default value is the Central time zone in the U.S. (Chicago)."
 msgstr ""
+"Cuando edite :file:`settings.py`, defina :setting:`TIME_ZONE` con su zona "
+"horaria. El valor predeterminado es la zona horaria central de los Estados "
+"Unidos (Chicago)."
 
 #. type: Plain text
 #: orig/tutorial01.txt:244
@@ -679,6 +715,11 @@ msgid ""
 "this Django instance. Apps can be used in multiple projects, and you can "
 "package and distribute them for use by others in their projects."
 msgstr ""
+"Fíjese en la opción :setting:`INSTALLED_APPS`, definida cerca del final del "
+"fichero.  Allí están los nombres de todas las aplicaciones Django que están "
+"activas en esta instancia de Django.  Es posible usar una misma aplicación en "
+"múltiples proyectos, y también puede empaquetarlas y distribuirlas para que "
+"otros las usen en sus proyectos."
 
 #. type: Plain text
 #: orig/tutorial01.txt:247
@@ -686,21 +727,23 @@ msgid ""
 "By default, :setting:`INSTALLED_APPS` contains the following apps, all of "
 "which come with Django:"
 msgstr ""
+"Por omisión, :setting:`INSTALLED_APPS` contiene las siguientes aplicaciones, "
+"todas las cuales están incluidas en Django:"
 
 #. type: Bullet: '* '
 #: orig/tutorial01.txt:249
 msgid ":mod:`django.contrib.auth` -- An authentication system."
-msgstr ""
+msgstr ":mod:`django.contrib.auth` -- Un sistema de autenticación."
 
 #. type: Bullet: '* '
 #: orig/tutorial01.txt:251
 msgid ":mod:`django.contrib.contenttypes` -- A framework for content types."
-msgstr ""
+msgstr ":mod:`django.contrib.contenttypes` -- Un framework para tipos de contenido."
 
 #. type: Bullet: '* '
 #: orig/tutorial01.txt:253
 msgid ":mod:`django.contrib.sessions` -- A session framework."
-msgstr ""
+msgstr ":mod:`django.contrib.sessions` -- Un framework para sesiones."
 
 #. type: Bullet: '* '
 #: orig/tutorial01.txt:256
@@ -708,17 +751,21 @@ msgid ""
 ":mod:`django.contrib.sites` -- A framework for managing multiple sites with "
 "one Django installation."
 msgstr ""
+":mod:`django.contrib.sites` -- Un framework para administrar múltiples sitios "
+"con una única instalación de Django."
 
 #. type: Bullet: '* '
 #: orig/tutorial01.txt:258
 msgid ":mod:`django.contrib.messages` -- A messaging framework."
-msgstr ""
+msgstr ":mod:`django.contrib.messages` -- Un framework para envío de mensajes."
 
 #. type: Bullet: '* '
 #: orig/tutorial01.txt:261
 msgid ""
 ":mod:`django.contrib.staticfiles` -- A framework for managing static files."
 msgstr ""
+":mod:`django.contrib.staticfiles` -- Un framework para administrar ficheros "
+"estáticos."
 
 #. type: Plain text
 #: orig/tutorial01.txt:263
@@ -726,6 +773,8 @@ msgid ""
 "These applications are included by default as a convenience for the common "
 "case."
 msgstr ""
+"Estas aplicaciones están incluidas de manera predeterminada para facilitar "
+"tareas frecuentes."
 
 #. type: Plain text
 #: orig/tutorial01.txt:267
@@ -734,12 +783,15 @@ msgid ""
 "so we need to create the tables in the database before we can use them. To "
 "do that, run the following command:"
 msgstr ""
+"Cada una de estas aplicaciones usa al menos una tabla en la base de datos, "
+"así que es necesario crear dichas tablas antes de poder usar las "
+"aplicaciones. Para hacerlo, ejecute la siguiente orden:"
 
 #. type: Plain text
 #: orig/tutorial01.txt:271 orig/tutorial01.txt:512
 #, no-wrap
 msgid "    python manage.py syncdb\n"
-msgstr ""
+msgstr "    python manage.py syncdb\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:277
