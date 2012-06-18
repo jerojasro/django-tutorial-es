@@ -591,10 +591,10 @@ msgid ""
 "keys in the :setting:`DATABASES` ``'default'`` item to match your database "
 "connection settings."
 msgstr ""
-"Ahora edite :file:`mysite/settings.py`. Es un módulo Python normal con "
-"variables de módulo que representan opciones de Django. Cambie los siguientes "
-"elementos en :setting:`DATABASES` ``'default'`` para que coincidan con la "
-"configuración necesaria para conectarse a su base de datos."
+"Ahora, edite :file:`mysite/settings.py`. Es un módulo Python normal con "
+"variables de módulo representando las distintas opciones de Django. Cambie "
+"las siguientes entradas en :setting:`DATABASES` ``'default'`` por las "
+"necesarias para configurar la conexión a su base de datos."
 
 #. type: Bullet: '* '
 #: orig/tutorial01.txt:202
@@ -631,14 +631,14 @@ msgid ""
 "  When specifying the path, always use forward slashes, even on\n"
 "  Windows (e.g. ``C:/homes/user/mysite/sqlite3.db``).\n"
 msgstr ""
-"  Al especificar la ruta, use siempre barras, incluso en Windows (por ejemplo,\n"
+"  Al indicar la ruta, use siempre barras, incluso en Windows (por ejemplo,\n"
 "  ``C:/homes/user/mysite/sqlite3.db``).\n"
 
 #. type: Bullet: '* '
 #: orig/tutorial01.txt:214
 msgid ":setting:`USER` -- Your database username (not used for SQLite)."
 msgstr ""
-":setting:`USER` -- El nombre de usuario para su base de datos (no se requiere "
+":setting:`USER` -- El nombre de usuario para su base de datos (no es necesario "
 "para SQLite)."
 
 #. type: Bullet: '* '
@@ -685,7 +685,7 @@ msgid ""
 msgstr ""
 "    Si usa PostgreSQL o MySQL, asegúrese de haber creado una base de datos en\n"
 "    este punto. Hágalo con la orden \"``CREATE DATABASE database_name;``\" desde\n"
-"    el intérprete interactivo de órdenes de su servidor de bases de datos.\n"
+"    el intérprete de órdenes de su base de datos.\n"
 
 #. type: Plain text
 #: orig/tutorial01.txt:236
@@ -703,8 +703,9 @@ msgid ""
 "While you're editing :file:`settings.py`, set :setting:`TIME_ZONE` to your "
 "time zone. The default value is the Central time zone in the U.S. (Chicago)."
 msgstr ""
-"Mientras edite :file:`settings.py`, defina :setting:`TIME_ZONE` con su zona "
-"horaria. El valor predeterminado es la zona Central en Estados Unidos (Chicago)."
+"Cuando edite :file:`settings.py`, defina :setting:`TIME_ZONE` con su zona "
+"horaria. El valor predeterminado es la zona horaria Central de los Estados "
+"Unidos (Chicago)."
 
 #. type: Plain text
 #: orig/tutorial01.txt:244
@@ -726,8 +727,8 @@ msgid ""
 "By default, :setting:`INSTALLED_APPS` contains the following apps, all of "
 "which come with Django:"
 msgstr ""
-"De manera predeterminada, :setting:`INSTALLED_APPS` contiene las siguientes "
-"aplicaciones, todas las cuales están incluidas en la instalación de Django."
+"Por omisión, :setting:`INSTALLED_APPS` contiene las siguientes aplicaciones, "
+"todas las cuales están incluidas en Django:"
 
 #. type: Bullet: '* '
 #: orig/tutorial01.txt:249
@@ -789,8 +790,8 @@ msgid ""
 "do that, run the following command:"
 msgstr ""
 "Cada una de estas aplicaciones usa al menos una tabla en la base de datos, "
-"por lo que es necesario crear las tablas en la base de datos antes de poder "
-"usar las aplicaciones. Para hacerlo, ejecute la siguiente orden:"
+"así que es necesario crear dichas tablas antes de poder usar las "
+"aplicaciones. Para hacerlo, ejecute la siguiente orden:"
 
 #. type: Plain text
 #: orig/tutorial01.txt:271 orig/tutorial01.txt:512
